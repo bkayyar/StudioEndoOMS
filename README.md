@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!--
 Licensed to the Apache Software Foundation (ASF) under one
 or more contributor license agreements.  See the NOTICE file
@@ -613,3 +614,7 @@ software:
  Extensions API)
 - Other classes such as HttpClient and various related ones use
  the JSSE (Java Secure Sockets Extension) API
+=======
+# StudioEndoOMS
+Order Management System for Studio Endo
+>>>>>>> f942ddf5954bf8a715818300409c4a7f77d51df3

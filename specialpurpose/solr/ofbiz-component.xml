@@ -31,13 +31,13 @@ under the License.
     <service-resource type="model" loader="main" location="servicedef/solrservices.xml"/>
     <service-resource type="eca" loader="main" location="servicedef/secas.xml"/>
 
-    <webapp name="solr"
+    <!--<webapp name="solr"
         title="Apache Solr Integration"
         server="default-server"
         location="webapp/solr"
         mount-point="/solr"
         base-permission="OFBTOOLS,CONTENTMGR"
         menu-name="secondary"
-        app-bar-display="true" />
+        app-bar-display="true" />-->
 
 </ofbiz-component>
