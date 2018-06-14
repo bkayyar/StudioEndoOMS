@@ -94,13 +94,13 @@ under the License.
     <test-suite loader="main" location="testdef/fixedassettests.xml"/>
     <test-suite loader="main" location="testdef/ratetests.xml"/>
 
-    <webapp name="accounting"
+   <!--<webapp name="accounting"
         title="Accounting"
         server="default-server"
         location="webapp/accounting"
         base-permission="OFBTOOLS,ACCOUNTING"
         mount-point="/accounting"
-        app-bar-display="false"/>
+        app-bar-display="false"/>-->
 
     <webapp name="ar"
         title="Accounting - AR"
