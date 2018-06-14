@@ -18,7 +18,7 @@ specific language governing permissions and limitations
 under the License.
 -->
 
-<ofbiz-component name="birt" enabled="false"
+<ofbiz-component name="birt" enabled="true"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/ofbiz-component.xsd">
     <resource-loader name="main" type="component"/>
@@ -57,7 +57,7 @@ under the License.
         base-permission="OFBTOOLS,WEBTOOLS"
         mount-point="/birt"
         menu-name="secondary"
-        app-bar-display="true"/>
+        app-bar-display="false"/>
 
     <container name="birt-container" loaders="main" class="org.apache.ofbiz.birt.container.BirtContainer"/>
 

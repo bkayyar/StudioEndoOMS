@@ -17,7 +17,7 @@ KIND, either express or implied.  See the License for the
 specific language governing permissions and limitations
 under the License.
 -->
-<ofbiz-component name="scrum" enabled="false"
+<ofbiz-component name="scrum" enabled="true"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/ofbiz-component.xsd">
     <!-- define resource loaders; most common is to use the component resource loader -->
@@ -49,7 +49,7 @@ under the License.
         title="Scrum"
         server="default-server"
         location="webapp/scrum"
-        app-bar-display="true"
+        app-bar-display="false"
         base-permission="SCRUM"
         mount-point="/scrum"/>
         

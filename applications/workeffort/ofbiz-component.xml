@@ -56,7 +56,6 @@ under the License.
 
      <webapp name="ical"
         title="iCalendar"
-        app-bar-display="false"
         server="default-server"
         location="webapp/ical"
         mount-point="/iCalendar"

@@ -18,7 +18,7 @@ specific language governing permissions and limitations
 under the License.
 -->
 
-<ofbiz-component name="bi" enabled="false"
+<ofbiz-component name="bi" enabled="true"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/ofbiz-component.xsd">
     <resource-loader name="main" type="component"/>
@@ -48,5 +48,5 @@ under the License.
         location="webapp/bi"
         base-permission="OFBTOOLS,BI"
         mount-point="/bi"
-        app-bar-display="true"/>
+        app-bar-display="false"/>
 </ofbiz-component>
