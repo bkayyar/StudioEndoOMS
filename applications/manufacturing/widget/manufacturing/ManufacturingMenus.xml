@@ -40,42 +40,42 @@ under the License.
             </condition>
             <link target="FindRoutingTask"/>
         </menu-item>
-        <menu-item name="calendar" title="${uiLabelMap.ManufacturingCalendar}">
+        <!--<menu-item name="calendar" title="${uiLabelMap.ManufacturingCalendar}">
             <condition>
                 <if-has-permission permission="MANUFACTURING" action="_CREATE"/>
             </condition>
             <link target="FindCalendar"/>
-        </menu-item>
-        <menu-item name="costs" title="${uiLabelMap.ManufacturingCostCalcs}">
+        </menu-item>-->
+        <!--<menu-item name="costs" title="${uiLabelMap.ManufacturingCostCalcs}">
             <condition>
                 <if-has-permission permission="MANUFACTURING" action="_CREATE"/>
             </condition>
             <link target="EditCostCalcs"/>
-        </menu-item>
+        </menu-item>-->
         <menu-item name="bom" title="${uiLabelMap.ManufacturingBillOfMaterials}">
             <condition>
                 <if-has-permission permission="MANUFACTURING" action="_CREATE"/>
             </condition>
             <link target="FindBom"/>
         </menu-item>
-        <menu-item name="mrp" title="${uiLabelMap.ManufacturingMrp}">
+        <!--<menu-item name="mrp" title="${uiLabelMap.ManufacturingMrp}">
             <condition>
                 <if-has-permission permission="MANUFACTURING" action="_CREATE"/>
             </condition>
             <link target="FindInventoryEventPlan"/>
-        </menu-item>
-        <menu-item name="ShipmentPlans" title="${uiLabelMap.ManufacturingShipmentPlans}">
+        </menu-item>-->
+        <!--<menu-item name="ShipmentPlans" title="${uiLabelMap.ManufacturingShipmentPlans}">
             <condition>
                 <if-has-permission permission="MANUFACTURING" action="_CREATE"/>
             </condition>
             <link target="WorkWithShipmentPlans"/>
-        </menu-item>
-        <menu-item name="ManufacturingReports" title="${uiLabelMap.ManufacturingReports}">
+        </menu-item>-->
+        <!--<menu-item name="ManufacturingReports" title="${uiLabelMap.ManufacturingReports}">
             <condition>
                 <if-has-permission permission="MANUFACTURING" action="_CREATE"/>
             </condition>
             <link target="ManufacturingReports"/>
-        </menu-item>
+        </menu-item>-->
     </menu>
 
 
