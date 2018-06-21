@@ -31,7 +31,7 @@ under the License.
         <!--<menu-item name="reviews" title="${uiLabelMap.ProductReviews}"><link target="FindReviews"/></menu-item>-->
         <menu-item name="configs" title="${uiLabelMap.ProductConfigItems}"><link target="FindProductConfigItems"/></menu-item>
         <!--<menu-item name="Subscription" title="${uiLabelMap.ProductSubscriptions}"><link target="FindSubscription"/></menu-item>-->
-        <menu-item name="shipping" title="${uiLabelMap.ProductShipping}"><link target="ListShipmentMethodTypes"/></menu-item>
+        <!--<menu-item name="shipping" title="${uiLabelMap.ProductShipping}"><link target="ListShipmentMethodTypes"/></menu-item>-->
         <menu-item name="Imagemanagement" title="${uiLabelMap.ImageManagement}"><link target="Imagemanagement"/></menu-item>
     </menu>
 
@@ -340,7 +340,7 @@ under the License.
                 <parameter param-name="productId"/>
             </link>
         </menu-item>
-        <menu-item name="EditProductPrices" title="${uiLabelMap.ProductPrices}">
+        <!--<menu-item name="EditProductPrices" title="${uiLabelMap.ProductPrices}">
             <link target="EditProductPrices">
                 <parameter param-name="productId"/>
             </link>
@@ -455,7 +455,7 @@ under the License.
             <link target="EditVendorProduct">
                 <parameter param-name="productId"/>
             </link>
-        </menu-item>
+        </menu-item>-->
         <menu-item name="QuickAddVariants" title="${uiLabelMap.ProductVariants}">
             <condition>
                 <if-compare field="product.isVirtual" operator="equals" value="Y"/>
@@ -464,7 +464,7 @@ under the License.
                 <parameter param-name="productId"/>
             </link>
         </menu-item>
-        <menu-item name="EditProductConfigs" title="${uiLabelMap.ProductConfigs}">
+        <!--<menu-item name="EditProductConfigs" title="${uiLabelMap.ProductConfigs}">
             <condition>
                 <or>
                     <if-compare field="product.productTypeId" operator="equals" value="AGGREGATED"/>
@@ -513,11 +513,11 @@ under the License.
             <link target="ViewProductGroupOrder">
                 <parameter param-name="productId"/>
             </link>
-        </menu-item>
+        </menu-item>-->
     </menu>
 
     <menu name="ProductSubTabBar" menu-container-style="button-bar button-style-2" default-selected-style="selected">
-        <menu-item name="EditProduct" title="${uiLabelMap.ProductNewProduct}" widget-style="buttontext create">
+        <!--<menu-item name="EditProduct" title="${uiLabelMap.ProductNewProduct}" widget-style="buttontext create">
             <link target="EditProduct"/>
         </menu-item>
         <menu-item name="CreateVirtualWithVariantsForm" title="${uiLabelMap.ProductNewVirtualProduct}" widget-style="buttontext create">
@@ -546,7 +546,7 @@ under the License.
         </menu-item>
         <menu-item name="ProductTags" title="${uiLabelMap.ProductTags}">
             <link target="EditProductTag"/>
-        </menu-item>
+        </menu-item>-->
         <menu-item name="ExpandAll" title="${uiLabelMap.CommonExpandAll}" widget-style="buttontext expand-all">
             <condition>
                 <and>
