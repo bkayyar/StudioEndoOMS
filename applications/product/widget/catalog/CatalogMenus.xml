@@ -464,7 +464,7 @@ under the License.
                 <parameter param-name="productId"/>
             </link>
         </menu-item>
-        <!--<menu-item name="EditProductConfigs" title="${uiLabelMap.ProductConfigs}">
+        <menu-item name="EditProductConfigs" title="${uiLabelMap.ProductConfigs}">
             <condition>
                 <or>
                     <if-compare field="product.productTypeId" operator="equals" value="AGGREGATED"/>
@@ -475,7 +475,7 @@ under the License.
                 <parameter param-name="productId"/>
             </link>
         </menu-item>
-        <menu-item name="EditProductAssetUsage" title="${uiLabelMap.ProductAssetUsage}">
+        <!--<menu-item name="EditProductAssetUsage" title="${uiLabelMap.ProductAssetUsage}">
             <condition>
                 <or>
                     <if-compare field="product.productTypeId" operator="equals" value="ASSET_USAGE"/>
