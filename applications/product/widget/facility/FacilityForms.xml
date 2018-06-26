@@ -471,14 +471,14 @@ under the License.
         <field name="quantityUom" title="${uiLabelMap.ProductQuantityUomId}">
             <display-entity entity-name="Uom" key-field-name="uomId" description="${abbreviation}"/>
         </field>
-        <field name="usageQuantity" title="${uiLabelMap.ProductUsage}"><display/></field>
+        <!--<field name="usageQuantity" title="${uiLabelMap.ProductUsage}"><display/></field>
         <field name="defaultPrice" title="${uiLabelMap.ProductDefaultPrice}"><display/></field>
         <field name="listPrice" title="${uiLabelMap.ProductListPrice}"><display/></field>
         <field name="wholeSalePrice" title="${uiLabelMap.ProductWholeSalePrice}"><display/></field>
         <field name="fromDateSellThrough" entry-name="parameters.fromDateSellThrough"><display/></field>
         <field name="sellThroughInitialInventory"><display/></field>
         <field name="sellThroughInventorySold"><display/></field>
-        <field name="sellThroughPercentage"><display/></field>
+        <field name="sellThroughPercentage"><display/></field>-->
     </form>
 
     <!-- multi-form for list of packages ready to be weighted and scheduled for shipment -->

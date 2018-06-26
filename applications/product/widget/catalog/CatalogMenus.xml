@@ -394,17 +394,17 @@ under the License.
             <link target="EditProductFeatures">
                 <parameter param-name="productId"/>
             </link>
-        </menu-item>
+        </menu-item>-->
         <menu-item name="EditProductFacilities" title="${uiLabelMap.ProductFacilities}">
             <link target="EditProductFacilities">
                 <parameter param-name="productId"/>
             </link>
         </menu-item>
-        <menu-item name="EditProductFacilityLocations" title="${uiLabelMap.ProductLocations}">
+        <!--<menu-item name="EditProductFacilityLocations" title="${uiLabelMap.ProductLocations}">
             <link target="EditProductFacilityLocations">
                 <parameter param-name="productId"/>
             </link>
-        </menu-item>
+        </menu-item>-->
         <menu-item name="EditProductInventoryItems" title="${uiLabelMap.ProductInventory}">
             <link target="EditProductInventoryItems">
                 <parameter param-name="productId"/>
@@ -416,7 +416,7 @@ under the License.
                 <parameter param-name="productId"/>
             </link>
         </menu-item>
-        <menu-item name="ViewProductAgreements" title="${uiLabelMap.ProductAgreements}">
+        <!--<menu-item name="ViewProductAgreements" title="${uiLabelMap.ProductAgreements}">
             <link target="ViewProductAgreements">
                 <parameter param-name="productId"/>
             </link>
