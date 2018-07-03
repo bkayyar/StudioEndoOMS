@@ -2429,7 +2429,10 @@ public class ProductionRunServices {
                 if (UtilValidate.isNotEmpty(bomList)) {
                     serviceContext.clear();
                     serviceContext.put("productId", componentProductId);
-                    serviceContext.put("quantity", componentQuantity);
+                    if (co.isHeightOption()) 
+                        serviceContext.put("quantity", co.getHeight());
+                    else 
+                        serviceContext.put("quantity", componentQuantity);
                     serviceContext.put("startDate", UtilDateTime.nowTimestamp());
                     serviceContext.put("facilityId", facilityId);
                     serviceContext.put("userLogin", userLogin);

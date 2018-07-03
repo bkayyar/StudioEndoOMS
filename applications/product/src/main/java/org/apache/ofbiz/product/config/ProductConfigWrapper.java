@@ -551,6 +551,8 @@ public class ProductConfigWrapper implements Serializable {
         boolean available = true;
         ConfigItem parentConfigItem = null;
         String comments = null;  //  comments for production run entered during ordering
+        float height = 100.0f;     //  Height of light fixture
+        boolean IS_HEIGHT_OPTION = false;
 
         public ConfigOption(Delegator delegator, LocalDispatcher dispatcher, GenericValue option, ConfigItem configItem, String catalogId, String webSiteId, String currencyUomId, GenericValue autoUserLogin) throws Exception {
             configOption = option;
@@ -658,6 +660,14 @@ public class ProductConfigWrapper implements Serializable {
                 optionListPrice = optionListPrice.add(listPrice.multiply(mult));
                 optionPrice = optionPrice.add(price.multiply(mult));
             }
+        }
+
+        public float getHeight() {
+            return height;
+        }
+
+        public boolean isHeightOption() {
+            return IS_HEIGHT_OPTION;
         }
 
         public String getOptionName() {

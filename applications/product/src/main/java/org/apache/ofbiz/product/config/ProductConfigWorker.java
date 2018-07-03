@@ -23,6 +23,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Objects;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -89,6 +90,8 @@ public final class ProductConfigWorker {
 
     public static void fillProductConfigWrapper(ProductConfigWrapper configWrapper, HttpServletRequest request) {
         int numOfQuestions = configWrapper.getQuestions().size();
+        int HEIGHT_COMMENT_NUMBER = 1; //ID of the comments box that will have the height number
+        float height = 0.0f;
         for (int k = 0; k < numOfQuestions; k++) {
             String[] opts = request.getParameterValues(Integer.toString(k));
             if (opts == null) {
@@ -119,12 +122,25 @@ public final class ProductConfigWorker {
                     ProductConfigWrapper.ConfigItem question = configWrapper.getQuestions().get(k);
                     if (question.isSingleChoice()) {
                         comments = request.getParameter("comments_" + k + "_" + "0");
+                        if (k == HEIGHT_COMMENT_NUMBER) {
+                            if (Objects.equals("", comments))
+                                comments = "100.0";
+                            try {
+                                height = Float.parseFloat(comments);
+                            } catch (NumberFormatException nfe) {
+                                Debug.logError(nfe.getMessage(), module);
+                            }
+                        }
                     } else {
                         comments = request.getParameter("comments_" + k + "_" + cnt);
                     }
 
                     configWrapper.setSelected(k, cnt, comments);
                     ProductConfigWrapper.ConfigOption option = configWrapper.getItemOtion(k, cnt);
+                    if (k == HEIGHT_COMMENT_NUMBER) {
+                        option.height = height;
+                        option.IS_HEIGHT_OPTION = true;
+                    }
 
                     //  set selected variant products
                     if (UtilValidate.isNotEmpty(option) && (option.hasVirtualComponent())) {
