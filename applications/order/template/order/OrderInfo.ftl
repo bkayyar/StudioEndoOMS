@@ -132,11 +132,11 @@ under the License.
               <td valign="top" width="80%"><#if orderHeader.orderDate?has_content>${Static["org.apache.ofbiz.base.util.UtilFormatOut"].formatDateTime(orderHeader.orderDate, "", locale, timeZone)!}</#if></td>
             </tr>
             <tr><td colspan="3"><hr /></td></tr>
-            <tr>
+            <#--<tr>
               <td align="right" valign="top" width="15%" class="label">&nbsp;${uiLabelMap.CommonCurrency}</td>
               <td width="5%">&nbsp;</td>
               <td valign="top" width="80%">${orderHeader.currencyUom?default("???")}</td>
-            </tr>
+            </tr>-->
             <#if orderHeader.internalCode?has_content>
             <tr><td colspan="3"><hr /></td></tr>
             <tr>
@@ -146,7 +146,7 @@ under the License.
             </tr>
             </#if>
             <tr><td colspan="3"><hr /></td></tr>
-            <tr>
+            <#--<tr>
               <td align="right" valign="top" width="15%" class="label">&nbsp;${uiLabelMap.OrderSalesChannel}</td>
               <td width="5%">&nbsp;</td>
               <td valign="top" width="80%">
@@ -157,9 +157,9 @@ under the License.
                     ${uiLabelMap.CommonNA}
                   </#if>
               </td>
-            </tr>
+            </tr>-->
             <tr><td colspan="3"><hr /></td></tr>
-            <#if productStore?has_content>
+            <#--<#if productStore?has_content>
               <tr>
                 <td align="right" valign="top" width="15%" class="label">&nbsp;${uiLabelMap.OrderProductStore}</td>
                 <td width="5%">&nbsp;</td>
@@ -168,7 +168,7 @@ under the License.
                 </td>
               </tr>
               <tr><td colspan="3"><hr /></td></tr>
-            </#if>
+            </#if>-->
             <tr>
               <td align="right" valign="top" width="15%" class="label">&nbsp;${uiLabelMap.OrderOriginFacility}</td>
               <td width="5%">&nbsp;</td>
@@ -225,7 +225,7 @@ under the License.
             </#if>
             <#if orderContentWrapper.get("IMAGE_URL", "url")?has_content>
             <tr><td colspan="3"><hr /></td></tr>
-            <tr>
+            <#--<tr>
               <td align="right" valign="top" width="15%" class="label">&nbsp;${uiLabelMap.OrderImage}</td>
               <td width="5%">&nbsp;</td>
               <td valign="top" width="80%">
@@ -286,7 +286,7 @@ under the License.
                   <input type="hidden" name="isViewed" value="Y"/>
                 </form>
               </td>
-            </tr>
+            </tr>-->
             <tr id="viewed" style="display: none;">
               <td class="label">${uiLabelMap.OrderViewed}</td>
               <td width="5%"></td>

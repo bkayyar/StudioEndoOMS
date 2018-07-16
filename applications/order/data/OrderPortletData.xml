@@ -65,15 +65,15 @@
     <PortletPortletCategory portalPortletId="ListSalesOrders" portletCategoryId="ORDERMGR"/>
     
     <PortalPage portalPageId="OrderPortalPage" sequenceNum="0" portalPageName="Order Portal Page" description="Order main page using flexible Portal technology" ownerUserLoginId="_NA_"/>
-    <PortalPageColumn portalPageId="OrderPortalPage" columnSeqId="00001"/>
+    <!--<PortalPageColumn portalPageId="OrderPortalPage" columnSeqId="00001"/>-->
     <PortalPageColumn portalPageId="OrderPortalPage" columnSeqId="00002"/>
 
     <PortalPagePortlet portalPageId="OrderPortalPage" portalPortletId="ListSalesOrders" portletSeqId="00001" columnSeqId="00001" sequenceNum="0"/>
-    <PortalPagePortlet portalPageId="OrderPortalPage" portalPortletId="BestSellingProducts" portletSeqId="00001" columnSeqId="00001" sequenceNum="1"/>
+    <!--<PortalPagePortlet portalPageId="OrderPortalPage" portalPortletId="BestSellingProducts" portletSeqId="00001" columnSeqId="00001" sequenceNum="1"/>-->
 
     <!-- Order Reports -->
     <PortalPage portalPageId="OrderReportPage" sequenceNum="0" portalPageName="Order Purchase Report Portal Page" description="Order purchase Report page using flexible Portal technology" ownerUserLoginId="_NA_"/>
-    <PortalPageColumn portalPageId="OrderReportPage" columnSeqId="00001" columnWidthPercentage="50"/>
+    <!--<PortalPageColumn portalPageId="OrderReportPage" columnSeqId="00001" columnWidthPercentage="50"/>-->
     <PortalPageColumn portalPageId="OrderReportPage" columnSeqId="00002"/>
 
     <PortalPortlet portalPortletId="SalesByStore"

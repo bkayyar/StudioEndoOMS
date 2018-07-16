@@ -2425,7 +2425,7 @@ under the License.
       <field name="taxPercentage" type="fixed-point"/>
       <field name="taxAuthPartyId" type="id-ne"/>
       <field name="taxAuthGeoId" type="id-ne"/>
-      <field name="taxInPrice" type="indicator"><description>If Y the price field has tax included for the given taxAuthPartyId/taxAuthGeoId at the taxPercentage.</description></field>
+      <field name="taxInPrice" type="indicator" default-value="Y"><hidden/></field>
       <field name="createdDate" type="date-time"></field>
       <field name="createdByUserLogin" type="id-vlong"></field>
       <field name="lastModifiedDate" type="date-time"></field>

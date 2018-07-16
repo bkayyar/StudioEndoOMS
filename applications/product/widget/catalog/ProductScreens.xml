@@ -1075,7 +1075,7 @@ under the License.
             </widgets>
         </section>
     </screen>
-    <screen name="CreateVirtualWithVariantsForm">
+    <!--<screen name="CreateVirtualWithVariantsForm">
         <section>
             <widgets>
                 <decorator-screen name="CommonProductDecorator" location="${parameters.productDecoratorLocation}">
@@ -1101,7 +1101,7 @@ under the License.
                 </screenlet>
             </widgets>
         </section>
-    </screen>
+    </screen>-->
     <screen name="EditProductMaints">
         <section>
             <actions>
@@ -1292,7 +1292,7 @@ under the License.
                 <set field="filterDate" type="Timestamp" from-field="nowTimestamp"/>
                 <script location="component://product/groovyScripts/catalog/product/BestProducts.groovy"/>
             </actions>
-            <widgets>
+            <!--<widgets>
                 <screenlet title="${uiLabelMap.ProductBestSellingProductsOf} ${now}">
                     <section>
                         <condition>
@@ -1308,7 +1308,7 @@ under the License.
                         </fail-widgets>
                     </section>
                 </screenlet>
-            </widgets>
+            </widgets>-->
         </section>
     </screen>
 

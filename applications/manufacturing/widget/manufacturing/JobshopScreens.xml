@@ -280,12 +280,12 @@ under the License.
                         <screenlet title="${uiLabelMap.ManufacturingMaterialsRequiredByRunningTask}">
                             <include-form name="ListIssueProductionRunDeclComponents" location="component://manufacturing/widget/manufacturing/ProductionRunForms.xml"/>
                         </screenlet>
-                        <screenlet title="${uiLabelMap.ManufacturingReturnMaterials}">
+                        <!--<screenlet title="${uiLabelMap.ManufacturingReturnMaterials}">
                             <include-form name="ListReturnProductionRunDeclComponents" location="component://manufacturing/widget/manufacturing/ProductionRunForms.xml"/>
                         </screenlet>
                         <screenlet title="${uiLabelMap.ManufacturingListOfProductionRunFixedAssets}">
                             <include-form name="ListProductionRunTaskFixedAssets" location="component://manufacturing/widget/manufacturing/ProductionRunForms.xml"/>
-                        </screenlet>
+                        </screenlet>-->
                     </decorator-section>
                 </decorator-screen>
             </widgets>

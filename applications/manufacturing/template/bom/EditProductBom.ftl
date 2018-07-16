@@ -48,7 +48,8 @@ function lookupBom() {
             <td>&nbsp; <a name="topform"/></td>
             <td>
                 <select name="productAssocTypeId" size="1">
-                <#if productAssocTypeId?has_content>
+                    <option value="MANUF_COMPONENT">Manufacturing BOM</option>
+                <#--<#if productAssocTypeId?has_content>
                     <#assign curAssocType = delegator.findOne("ProductAssocType", Static["org.apache.ofbiz.base.util.UtilMisc"].toMap("productAssocTypeId", productAssocTypeId), false)>
                     <#if curAssocType??>
                         <option selected="selected" value="${(curAssocType.productAssocTypeId)!}">${(curAssocType.get("description",locale))!}</option>
@@ -57,7 +58,7 @@ function lookupBom() {
                 </#if>
                 <#list assocTypes as assocType>
                     <option value="${(assocType.productAssocTypeId)!}">${(assocType.get("description",locale))!}</option>
-                </#list>
+                </#list>-->
                 </select>
             </td>
             <td align="right">${uiLabelMap.ProductProductId}</td>
@@ -90,7 +91,8 @@ function lookupBom() {
             <td>&nbsp;</td>
             <td>
                 <select name="productAssocTypeId" size="1">
-                <#if productAssocTypeId?has_content>
+                    <option value="MANUF_COMPONENT">Manufacturing BOM</option>
+                <#--<#if productAssocTypeId?has_content>
                     <#assign curAssocType = delegator.findOne("ProductAssocType", Static["org.apache.ofbiz.base.util.UtilMisc"].toMap("productAssocTypeId", productAssocTypeId), false)>
                     <#if curAssocType??>
                         <option selected="selected" value="${(curAssocType.productAssocTypeId)!}">${(curAssocType.get("description",locale))!}</option>
@@ -99,7 +101,7 @@ function lookupBom() {
                 </#if>
                 <#list assocTypes as assocType>
                     <option value="${(assocType.productAssocTypeId)!}">${(assocType.get("description",locale))!}</option>
-                </#list>
+                </#list>-->
                 </select>
             </td>
           </tr>
@@ -117,21 +119,21 @@ function lookupBom() {
                 <@htmlTemplate.lookupField value="${productIdTo!}" formName="editProductAssocForm" name="productIdTo" id="productIdTo" fieldFormName="LookupProduct"/>
             </td>
           </tr>
-          <tr>
+          <#--<tr>
             <td align="right">${uiLabelMap.CommonFromDate}</td>
             <td>&nbsp;</td>
             <td>
                 <@htmlTemplate.renderDateTimeField name="fromDate" event="" action="" className="" alert="" title="Format: yyyy-MM-dd HH:mm:ss.SSS" value="${nowTimestamp}" size="25" maxlength="50" id="fromDate_1" dateType="date" shortDateInput=false timeDropdownParamName="" defaultDateTimeString="" localizedIconTitle="" timeDropdown="" timeHourName="" classString="" hour1="" hour2="" timeMinutesName="" minutes="" isTwelveHour="" ampmName="" amSelected="" pmSelected="" compositeType="" formName=""/>
                 <span class="tooltip">(${uiLabelMap.ManufacturingWillBeSetToNow})</span>
             </td>
-          </tr>
+          </tr>-->
     <#else>
         <#assign curProductAssocType = productAssoc.getRelatedOne("ProductAssocType", true)>
         <input type="hidden" name="UPDATE_MODE" value="UPDATE"/>
         <input type="hidden" name="productId" value="${productId!}"/>
         <input type="hidden" name="productIdTo" value="${productIdTo!}"/>
         <input type="hidden" name="productAssocTypeId" value="${productAssocTypeId!}"/>
-        <input type="hidden" name="fromDate" value="${fromDate!}"/>
+        <#--<input type="hidden" name="fromDate" value="${fromDate!}"/>-->
         <table class="basic-table" cellspacing="0">
           <tr>
             <td align="right">${uiLabelMap.ProductProductId}</td>
@@ -148,13 +150,13 @@ function lookupBom() {
             <td>&nbsp;</td>
             <td><#if curProductAssocType??>${(curProductAssocType.get("description",locale))!}<#else> ${productAssocTypeId!}</#if></td>
           </tr>
-          <tr>
+          <#--<tr>
             <td align="right">${uiLabelMap.CommonFromDate}</td>
             <td>&nbsp;</td>
             <td>${fromDate!}</td>
-          </tr>
+          </tr>-->
     </#if>
-    <tr>
+    <#--<tr>
         <td width="26%" align="right">${uiLabelMap.CommonThruDate}</td>
         <td>&nbsp;</td>
         <td width="74%">
@@ -165,7 +167,7 @@ function lookupBom() {
             </#if>
             <@htmlTemplate.renderDateTimeField value="${value!''}" name="thruDate" className="" event="" action="" alert="" title="Format: yyyy-MM-dd HH:mm:ss.SSS" size="30" maxlength="30" id="fromDate_2" dateType="date" shortDateInput=false timeDropdownParamName="" defaultDateTimeString="" localizedIconTitle="" timeDropdown="" timeHourName="" classString="" hour1="" hour2="" timeMinutesName="" minutes="" isTwelveHour="" ampmName="" amSelected="" pmSelected="" compositeType="" formName=""/>
         </td>
-    </tr>
+    </tr>-->
     <tr>
         <td width="26%" align="right">${uiLabelMap.CommonSequenceNum}</td>
         <td>&nbsp;</td>
@@ -176,21 +178,21 @@ function lookupBom() {
         <td>&nbsp;</td>
         <td width="74%"><input type="text" name="reason" <#if useValues>value="${(productAssoc.reason)!}"<#else>value="${(request.getParameter("reason"))!}"</#if> size="60" maxlength="255"/></td>
     </tr>
-    <tr>
+    <#--<tr>
         <td width="26%" align="right">${uiLabelMap.ManufacturingInstruction}</td>
         <td>&nbsp;</td>
         <td width="74%"><input type="text" name="instruction" <#if useValues>value="${(productAssoc.instruction)!}"<#else>value="${(request.getParameter("instruction"))!}"</#if> size="60" maxlength="255"/></td>
-    </tr>
+    </tr>-->
     <tr>
         <td width="26%" align="right">${uiLabelMap.ManufacturingQuantity}</td>
         <td>&nbsp;</td>
         <td width="74%"><input type="text" name="quantity" <#if useValues>value="${(productAssoc.quantity)!}"<#else>value="${(request.getParameter("quantity"))!}"</#if> size="10" maxlength="15"/></td>
     </tr>
-    <tr>
+    <#--<tr>
         <td width="26%" align="right">${uiLabelMap.ManufacturingScrapFactor}</td>
         <td>&nbsp;</td>
         <td width="74%"><input type="text" name="scrapFactor" <#if useValues>value="${(productAssoc.scrapFactor)!}"<#else>value="${(request.getParameter("scrapFactor"))!}"</#if> size="10" maxlength="15"/></td>
-    </tr>
+    </tr>-->
     <tr>
         <td width="26%" align="right">${uiLabelMap.ManufacturingFormula}</td>
         <td>&nbsp;</td>
@@ -247,12 +249,12 @@ function lookupBom() {
       <tr class="header-row">
         <td>${uiLabelMap.ProductProductId}</td>
         <td>${uiLabelMap.ProductProductName}</td>
-        <td>${uiLabelMap.CommonFromDate}</td>
-        <td>${uiLabelMap.CommonThruDate}</td>
+        <#--<td>${uiLabelMap.CommonFromDate}</td>
+        <td>${uiLabelMap.CommonThruDate}</td>-->
         <td>${uiLabelMap.CommonSequenceNum}</td>
         <td>${uiLabelMap.CommonQuantity}</td>
-        <td>${uiLabelMap.ProductQuantityUom}</td>
-        <td>${uiLabelMap.ManufacturingScrapFactor}</td>
+        <#--<td>${uiLabelMap.ProductQuantityUom}</td>
+        <td>${uiLabelMap.ManufacturingScrapFactor}</td>-->
         <td>${uiLabelMap.ManufacturingFormula}</td>
         <td>${uiLabelMap.ManufacturingRoutingTask}</td>
         <td>&nbsp;</td>
@@ -269,10 +271,10 @@ function lookupBom() {
       <tr valign="middle"<#if alt_row> class="alternate-row"</#if>>
         <td><a href="<@ofbizUrl>EditProductBom?productId=${(assocFromProduct.productIdTo)!}&amp;productAssocTypeId=${(assocFromProduct.productAssocTypeId)!}#components</@ofbizUrl>" class="buttontext">${(assocFromProduct.productIdTo)!}</a></td>
         <td><#if listToProduct??><a href="<@ofbizUrl>EditProductBom?productId=${(assocFromProduct.productIdTo)!}&amp;productAssocTypeId=${(assocFromProduct.productAssocTypeId)!}#components</@ofbizUrl>" class="buttontext">${(listToProduct.internalName)!}</a></#if>&nbsp;</td>
-        <td<#if (assocFromProduct.getTimestamp("fromDate"))?? && nowDate.before(assocFromProduct.getTimestamp("fromDate"))> class="alert"</#if>>
+        <#--<td<#if (assocFromProduct.getTimestamp("fromDate"))?? && nowDate.before(assocFromProduct.getTimestamp("fromDate"))> class="alert"</#if>>
         ${(assocFromProduct.fromDate)!}&nbsp;</td>
         <td<#if (assocFromProduct.getTimestamp("thruDate"))?? && nowDate.after(assocFromProduct.getTimestamp("thruDate"))> class="alert"</#if>>
-        ${(assocFromProduct.thruDate)!}&nbsp;</td>
+        ${(assocFromProduct.thruDate)!}&nbsp;</td>-->
         <td>&nbsp;${(assocFromProduct.sequenceNum)!}</td>
         <td>&nbsp;${(assocFromProduct.quantity)!}</td>
         <td>&nbsp;<#if (quantityUom.abbreviation)?has_content> ${(quantityUom.abbreviation)!} <#else> ${(quantityUom.uomId)!} </#if></td>
@@ -304,8 +306,8 @@ function lookupBom() {
         <tr class="header-row">
             <td>${uiLabelMap.ProductProductId}</td>
             <td>${uiLabelMap.ProductProductName}</td>
-            <td>${uiLabelMap.CommonFromDate}</td>
-            <td>${uiLabelMap.CommonThruDate}</td>
+            <#--<td>${uiLabelMap.CommonFromDate}</td>
+            <td>${uiLabelMap.CommonThruDate}</td>-->
             <td>${uiLabelMap.CommonQuantity}</td>
             <td>&nbsp;</td>
         </tr>
@@ -316,8 +318,8 @@ function lookupBom() {
         <tr valign="middle"<#if alt_row> class="alternate-row"</#if>>
             <td><a href="<@ofbizUrl>EditProductBom?productId=${(assocToProduct.productId)!}&amp;productAssocTypeId=${(assocToProduct.productAssocTypeId)!}#components</@ofbizUrl>" class="buttontext">${(assocToProduct.productId)!}</a></td>
             <td><#if listToProduct??><a href="<@ofbizUrl>EditProductBom?productId=${(assocToProduct.productId)!}&amp;productAssocTypeId=${(assocToProduct.productAssocTypeId)!}#components</@ofbizUrl>" class="buttontext">${(listToProduct.internalName)!}</a></#if></td>
-            <td>${(assocToProduct.getTimestamp("fromDate"))!}&nbsp;</td>
-            <td>${(assocToProduct.getTimestamp("thruDate"))!}&nbsp;</td>
+            <#--<td>${(assocToProduct.getTimestamp("fromDate"))!}&nbsp;</td>
+            <td>${(assocToProduct.getTimestamp("thruDate"))!}&nbsp;</td>-->
             <td>${(assocToProduct.quantity)!}&nbsp;</td>
             <td>
                 <a href="<@ofbizUrl>UpdateProductBom?UPDATE_MODE=DELETE&amp;productId=${(assocToProduct.productId)!}&amp;productIdTo=${(assocToProduct.productIdTo)!}&amp;productAssocTypeId=${(assocToProduct.productAssocTypeId)!}&amp;fromDate=${Static["org.apache.ofbiz.base.util.UtilFormatOut"].encodeQueryValue(assocToProduct.getTimestamp("fromDate").toString())}&amp;useValues=true</@ofbizUrl>" class="buttontext">

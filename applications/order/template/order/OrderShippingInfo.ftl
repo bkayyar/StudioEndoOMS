@@ -47,7 +47,7 @@ under the License.
         jQuery("#setGiftMessageForm_" + shipGroupSeqId).submit();
     }
 </script>
-
+<#--
 <#if security.hasEntityPermission("ORDERMGR", "_UPDATE", session) && (!orderHeader.salesChannelEnumId?? || orderHeader.salesChannelEnumId != "POS_SALES_CHANNEL")>
   <div class="screenlet">
     <div class="screenlet-title-bar">
@@ -57,14 +57,13 @@ under the License.
     <div class="screenlet-body">
       <ul>
         <#if security.hasEntityPermission("FACILITY", "_CREATE", session) && ((orderHeader.statusId == "ORDER_APPROVED") || (orderHeader.statusId == "ORDER_SENT"))>
-          <#-- Special shipment options -->
           <#if orderHeader.orderTypeId == "SALES_ORDER">
             <li>
             <form name="quickShipOrder" method="post" action="<@ofbizUrl>quickShipOrder</@ofbizUrl>">
               <input type="hidden" name="orderId" value="${orderId}"/>
             </form>
             <a href="javascript:document.quickShipOrder.submit()" class="buttontext">${uiLabelMap.OrderQuickShipEntireOrder}</a></li>
-          <#else> <#-- PURCHASE_ORDER -->
+          <#else> 
             <span class="label">&nbsp;<#if orderHeader.orderTypeId == "PURCHASE_ORDER">${uiLabelMap.ProductDestinationFacility}</#if></span>
             <#if ownedFacilities?has_content>
               <#if !allShipments?has_content>
@@ -72,7 +71,6 @@ under the License.
                      <form action="/facility/control/quickShipPurchaseOrder?externalLoginKey=${externalLoginKey}" method="post">
                        <input type="hidden" name="initialSelected" value="Y"/>
                        <input type="hidden" name="orderId" value="${orderId}"/>
-                       <#-- destination form (/facility/control/ReceiveInventory) wants purchaseOrderId instead of orderId, so we set it here as a workaround -->
                        <input type="hidden" name="purchaseOrderId" value="${orderId}"/>
                       <select name="facilityId">
                         <#list ownedFacilities as facility>
@@ -139,7 +137,6 @@ under the License.
             </#if>
           </#if>
         </#if>
-        <#-- Refunds/Returns for Sales Orders and Delivery Schedules -->
         <#if orderHeader.statusId != "ORDER_COMPLETED" && orderHeader.statusId != "ORDER_CANCELLED">
           <li><a href="<@ofbizUrl>OrderDeliveryScheduleInfo?orderId=${orderId}</@ofbizUrl>" class="buttontext">${uiLabelMap.OrderViewEditDeliveryScheduleInfo}</a></li>
         </#if>
@@ -385,7 +382,6 @@ under the License.
                       </td>
                   </tr>
   
-                  <#-- the setting of shipping method is only supported for sales orders at this time -->
                   <#if orderHeader.orderTypeId == "SALES_ORDER">
                     <tr>
                       <td align="right" valign="top" width="15%">
@@ -394,11 +390,6 @@ under the License.
                       <td width="5">&nbsp;</td>
                       <td valign="top" width="80%">
                           <div>
-                              <#if orderHeader?has_content && orderHeader.statusId != "ORDER_CANCELLED" && orderHeader.statusId != "ORDER_COMPLETED" && orderHeader.statusId != "ORDER_REJECTED">
-                              <#-- passing the shipmentMethod value as the combination of three fields value
-                              i.e shipmentMethodTypeId & carrierPartyId & roleTypeId. Values are separated by
-                              "@" symbol.
-                              -->
                               <select name="shipmentMethod">
                                   <#if shipGroup.shipmentMethodTypeId?has_content>
                                   <option value="${shipGroup.shipmentMethodTypeId}@${shipGroup.carrierPartyId!}@${shipGroup.carrierRoleTypeId!}"><#if shipGroup.carrierPartyId?? && shipGroup.carrierPartyId != "_NA_">${shipGroup.carrierPartyId!}</#if>&nbsp;${shipmentMethodType.get("description",locale)!}</option>
@@ -539,8 +530,6 @@ under the License.
             </tr>
           </#if>
   
-          <#-- This section appears when Shipment of order is in picked status and its items are packed,this case comes when new shipping estimates based on weight of packages are more than or less than default percentage (defined in shipment.properties) of original shipping estimate-->
-          <#-- getShipGroupEstimate method of ShippingEvents class can be used for get shipping estimate from system, on the basis of new package's weight -->
           <#if shippingRateList?has_content>
             <#if orderReadHelper.getOrderTypeId() != "PURCHASE_ORDER">
               <tr><td colspan="3"><hr /></td></tr>
@@ -589,7 +578,6 @@ under the License.
             </#if>
           </#if>
   
-          <#-- tracking number -->
           <#if shipGroup.trackingNumber?has_content || orderShipmentInfoSummaryList?has_content>
             <tr><td colspan="3"><hr /></td></tr>
             <tr>
@@ -598,7 +586,6 @@ under the License.
               </td>
               <td width="5">&nbsp;</td>
               <td valign="top" width="80%">
-                <#-- TODO: add links to UPS/FEDEX/etc based on carrier partyId  -->
                 <#if shipGroup.trackingNumber?has_content>
                   ${shipGroup.trackingNumber}
                 </#if>
@@ -776,11 +763,9 @@ under the License.
             </tr>
          </#if>
   
-         <#-- shipment actions -->
          <#if security.hasEntityPermission("ORDERMGR", "_UPDATE", session) && ((orderHeader.statusId == "ORDER_CREATED") || (orderHeader.statusId == "ORDER_APPROVED") || (orderHeader.statusId == "ORDER_SENT"))>
   
   
-           <#-- Manual shipment options -->
            <tr><td colspan="3"><hr /></td></tr>
            <tr>
               <td colspan="3" valign="top" width="100%" align="center">
@@ -844,4 +829,4 @@ under the License.
     </div>
   </#list>
   </#if>
-</#if>
+</#if>-->

@@ -37,7 +37,6 @@ under the License.
   <div class="screenlet-title-bar">
     <ul>
       <li class="h3">${uiLabelMap.OrderSalesOrder}<#if shoppingCart??>&nbsp;${uiLabelMap.OrderInProgress}</#if></li>
-      <li><a href="javascript:document.salesentryform.submit();">${uiLabelMap.CommonContinue}</a></li>
       <li><a href="/partymgr/control/findparty?${StringUtil.wrapString(externalKeyParam)}">${uiLabelMap.PartyFindParty}</a></li>
     </ul>
     <br class="clear"/>
@@ -47,14 +46,14 @@ under the License.
       <input type="hidden" name="originOrderId" value="${parameters.originOrderId!}"/>
       <input type="hidden" name="finalizeMode" value="type"/>
       <input type="hidden" name="orderMode" value="SALES_ORDER"/>
-      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <table width="40%" border="0" cellspacing="0" cellpadding="0">
         <tr>
           <td >&nbsp;</td>
-          <td width="300" align='right' valign='middle' nowrap="nowrap"><div class='tableheadtext'>${uiLabelMap.ProductProductStore}</div></td>
+          <#--<nowrap="nowrap"><div class='tableheadtext'>${uiLabelMap.ProductProductStore}</div></td>-->
           <td >&nbsp;</td>
           <td valign='middle'>
             <div class='tabletext'>
-              <select name="productStoreId"<#if sessionAttributes.orderMode??> disabled</#if>>
+              <select name="productStoreId" style="visibility: hidden" <#if sessionAttributes.orderMode??> disabled</#if>>
                 <#assign currentStore = shoppingCartProductStore>
                 <#if defaultProductStore?has_content>
                    <option value="${defaultProductStore.productStoreId}">${defaultProductStore.storeName!}</option>
@@ -69,9 +68,9 @@ under the License.
           </td>
         </tr>
         <tr><td colspan="4">&nbsp;</td></tr>
-        <tr>
+        <#--<tr>
           <td>&nbsp;</td>
-          <td align='right' valign='middle' nowrap="nowrap"><div class='tableheadtext'>${uiLabelMap.OrderSalesChannel}</div></td>
+          <td align='middle' valign='middle' nowrap="nowrap"><div class='tableheadtext'>${uiLabelMap.OrderSalesChannel}</div></td>
           <td>&nbsp;</td>
           <td valign='middle'>
             <div class='tabletext'>
@@ -88,7 +87,7 @@ under the License.
               </select>
             </div>
           </td>
-        </tr>
+        </tr>-->
         <tr><td colspan="4">&nbsp;</td></tr>
         <#if partyId??>
           <#assign thisPartyId = partyId>
@@ -97,7 +96,7 @@ under the License.
         </#if>
         <tr>
           <td>&nbsp;</td>
-          <td align='right' valign='middle' nowrap="nowrap"><div class='tableheadtext'>${uiLabelMap.CommonUserLoginId}</div></td>
+          <td align='middle' valign='middle' nowrap="nowrap"><div class='tableheadtext'>${uiLabelMap.CommonUserLoginId}</div></td>
           <td>&nbsp;</td>
           <td valign='middle'>
             <div class='tabletext'>
@@ -107,7 +106,7 @@ under the License.
         </tr>
         <tr>
           <td>&nbsp;</td>
-          <td align='right' valign='middle' nowrap="nowrap"><div class='tableheadtext'>${uiLabelMap.OrderCustomer}</div></td>
+          <td align='middle' valign='middle' nowrap="nowrap"><div class='tableheadtext'>${uiLabelMap.OrderCustomer}</div></td>
           <td>&nbsp;</td>
           <td valign='middle'>
             <div class='tabletext'>
@@ -116,6 +115,9 @@ under the License.
           </td>
         </tr>
       </table>
+      <div style="text-align:center">
+      <input type="button" class="smallSubmit" value="${uiLabelMap.CommonContinue}" onclick="javascript:document.salesentryform.submit();"/>
+      </div>
       </form>
   </div>
 </div>
@@ -126,7 +128,7 @@ under the License.
 <#if security.hasEntityPermission("ORDERMGR", "_PURCHASE_CREATE", session)>
   <#if shoppingCartOrderType != "SALES_ORDER">
   <div class="screenlet">
-    <div class="screenlet-title-bar">
+    <#--<div class="screenlet-title-bar">
       <ul>
         <li class="h3">${uiLabelMap.OrderPurchaseOrder}<#if shoppingCart??>&nbsp;${uiLabelMap.OrderInProgress}</#if></li>
         <li><a href="javascript:document.poentryform.submit();">${uiLabelMap.CommonContinue}</a></li>
@@ -189,7 +191,7 @@ under the License.
         </tr>
       </table>
       </form>
-    </div>
+    </div>-->
   </div>
   </#if>
 </#if>

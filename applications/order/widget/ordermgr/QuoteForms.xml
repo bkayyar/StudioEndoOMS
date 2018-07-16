@@ -59,7 +59,7 @@ under the License.
         </field>
         <field name="quoteName" title="${uiLabelMap.OrderOrderQuoteName}"></field>
         <field name="description"><hidden/></field>
-        <field name="validFromDate"><hidden/></field>
+        <!--<field name="validFromDate"><hidden/></field>
         <field name="validThruDate"><hidden/></field>
         <field name="productStoreId" title="${uiLabelMap.ProductProductStore}">
             <drop-down allow-empty="true">
@@ -67,7 +67,7 @@ under the License.
                     <entity-order-by field-name="storeName"/>
                 </entity-options>
             </drop-down>
-        </field>
+        </field>-->
         <field name="submitButton" title="${uiLabelMap.CommonFind}" widget-style="smallSubmit">
             <submit button-type="button"/>
         </field>
@@ -97,8 +97,8 @@ under the License.
         <field name="issueDate" title="${uiLabelMap.OrderOrderQuoteIssueDate}"></field>
         <field name="statusId" title="${uiLabelMap.CommonStatus}"></field>
         <field name="currencyUomId" title="${uiLabelMap.CommonCurrency}"></field>
-        <field name="validFromDate" title="${uiLabelMap.CommonValidFromDate}"></field>
-        <field name="validThruDate" title="${uiLabelMap.CommonValidThruDate}"></field>
+        <!--<field name="validFromDate" title="${uiLabelMap.CommonValidFromDate}"></field>
+        <field name="validThruDate" title="${uiLabelMap.CommonValidThruDate}"></field>-->
     </form>
     <form name="EditQuote" type="single" target="updateQuote" title="" default-map-name="quote"
         header-row-style="header-row" default-table-style="basic-table">
@@ -152,8 +152,8 @@ under the License.
                 </entity-options>
             </drop-down>
         </field>
-        <field name="validFromDate" title="${uiLabelMap.CommonValidFromDate}"></field>
-        <field name="validThruDate" title="${uiLabelMap.CommonValidThruDate}"></field>
+        <!--<field name="validFromDate" title="${uiLabelMap.CommonValidFromDate}"></field>
+        <field name="validThruDate" title="${uiLabelMap.CommonValidThruDate}"></field>-->
         <field name="quoteName" title="${uiLabelMap.OrderOrderQuoteName}"></field>
         <field name="description" title="${uiLabelMap.CommonDescription}"></field>
         <field name="submitButton" title="${uiLabelMap.CommonSubmit}" widget-style="smallSubmit"><submit button-type="button"/></field>

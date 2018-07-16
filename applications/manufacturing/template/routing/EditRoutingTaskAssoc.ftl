@@ -44,13 +44,13 @@ function addRoutingTask() {
             <td>
                 <@htmlTemplate.lookupField formName="addtaskassocform" name="workEffortIdTo" id="workEffortIdTo" fieldFormName="LookupRoutingTask"/>
             </td>
-            <th align="right">
+            <#--<th align="right">
                 ${uiLabelMap.CommonFromDate}
             </th>
             <td>
                 <@htmlTemplate.renderDateTimeField name="fromDate" event="" action="" className="" alert="" title="Format: yyyy-MM-dd HH:mm:ss.SSS" value="${nowTimestamp}" size="25" maxlength="30" id="fromDate_1" dateType="date" shortDateInput=false timeDropdownParamName="" defaultDateTimeString="" localizedIconTitle="" timeDropdown="" timeHourName="" classString="" hour1="" hour2="" timeMinutesName="" minutes="" isTwelveHour="" ampmName="" amSelected="" pmSelected="" compositeType="" formName=""/>
             </td>
-            <td align="center" width="40%">&nbsp;</td>
+            <td align="center" width="40%">&nbsp;</td>-->
         </tr>
         <tr>
             <th align="right">
@@ -59,13 +59,13 @@ function addRoutingTask() {
             <td>
                 <input type="text" name="sequenceNum" size="10"/>
             </td>
-            <th align="right">
+            <#--<th align="right">
                 ${uiLabelMap.CommonThruDate}
             </th>
             <td>
                 <@htmlTemplate.renderDateTimeField name="thruDate" event="" action="" className="" alert="" title="Format: yyyy-MM-dd HH:mm:ss.SSS" value="" size="25" maxlength="30" id="thruDate_1" dateType="date" shortDateInput=false timeDropdownParamName="" defaultDateTimeString="" localizedIconTitle="" timeDropdown="" timeHourName="" classString="" hour1="" hour2="" timeMinutesName="" minutes="" isTwelveHour="" ampmName="" amSelected="" pmSelected="" compositeType="" formName=""/>
             </td>
-            <td>&nbsp;</td>
+            <td>&nbsp;</td>-->
         </tr>
 
         <tr>

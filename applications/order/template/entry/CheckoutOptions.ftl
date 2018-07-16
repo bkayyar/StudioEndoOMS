@@ -22,7 +22,7 @@ under the License.
 function submitForm(form, mode, value) {
     if (mode == "DN") {
         // done action; checkout
-        form.action="<@ofbizUrl>checkout</@ofbizUrl>";
+        form.action="<@ofbizUrl>processorder</@ofbizUrl>";
         form.submit();
     } else if (mode == "CS") {
         // continue shopping
@@ -80,7 +80,7 @@ function submitForm(form, mode, value) {
 
   <table width="100%" border="0" cellpadding="0" cellspacing="0">
     <tr valign="top">
-      <td height="100%">
+      <td height="100%" width="30%">
         <div class="screenlet" style="height: 100%;">
             <div class="screenlet-title-bar">
                 <#if shipping == true>
@@ -107,7 +107,7 @@ function submitForm(form, mode, value) {
                       <a href="javascript:submitForm(document.checkoutInfoForm, 'NA', '');" class="buttontext">${uiLabelMap.PartyAddNewAddress}</a>
                     </td>
                   </tr>
-                  <#if (shoppingCart.getTotalQuantity() > 1) && !shoppingCart.containAllWorkEffortCartItems()> <#-- no splitting when only rental items -->
+                  <#--<#if (shoppingCart.getTotalQuantity() > 1) && !shoppingCart.containAllWorkEffortCartItems()>
                     <tr><td colspan="2"><hr /></td></tr>
                     <tr>
                       <td colspan="2" align="center">
@@ -117,7 +117,7 @@ function submitForm(form, mode, value) {
                         </#if>
                       </td>
                     </tr>
-                  </#if>
+                  </#if>-->
                    <#if shippingContactMechList?has_content>
                      <tr><td colspan="2"><hr /></td></tr>
                      <#list shippingContactMechList as shippingContactMech>
@@ -145,13 +145,22 @@ function submitForm(form, mode, value) {
                        </#if>
                      </#list>
                    </#if>
+                   <tr>
+                       <td align="center">
+                         <a href="javascript:submitForm(document.checkoutInfoForm, 'DN', '');" class="buttontextbig">${uiLabelMap.OrderContinueToFinalOrderReview}</a>
+                       </td>
+                   </tr>
+                   <tr>
+                        <td align="center">
+                         <a href="javascript:submitForm(document.checkoutInfoForm, 'CS', '');" class="buttontextbig">${uiLabelMap.OrderBacktoShoppingCart}</a>
+                        </td>
+                   </tr>
                  </table>
-
             </div>
         </div>
       </td>
       <td bgcolor="white" width="1">&nbsp;&nbsp;</td>
-      <td height="100%">
+      <td height="100%" style="display:none">
         <div class="screenlet" style="height: 100%;">
             <div class="screenlet-title-bar">
                 <#if shipping == true>
@@ -168,7 +177,7 @@ function submitForm(form, mode, value) {
                     <tr>
                       <td valign="top">
                         <label>
-                        <input type="radio" name="shipping_method" value="${shippingMethod}" <#if shippingMethod == chosenShippingMethod?default("N@A")>checked="checked"</#if>/>
+                        <input type="radio" name="shipping_method" value="${shippingMethod}" <#if shippingMethod == chosenShippingMethod?default("NO_SHIPPING@_NA_")>checked="checked"</#if>/>
                         <span>
                           <#if shoppingCart.getShippingContactMechId()??>
                             <#assign shippingEst = shippingEstWpr.getShippingEstimate(carrierShipmentMethod)?default(-1)>
@@ -284,7 +293,7 @@ function submitForm(form, mode, value) {
 
       </td>
       <td bgcolor="white" width="1">&nbsp;&nbsp;</td>
-      <td height="100%">
+      <td height="100%" style="display:none">
           <#-- Payment Method Selection -->
 
         <div class="screenlet" style="height: 100%;">
@@ -325,7 +334,7 @@ function submitForm(form, mode, value) {
                   <tr>
                     <td>
                       <label>
-                      <input type="radio" name="checkOutPaymentId" value="EXT_COD" <#if "EXT_COD" == checkOutPaymentId>checked="checked"</#if>/>
+                      <input type="radio" name="checkOutPaymentId" value="EXT_COD" checked="checked"/>
                       <span>${uiLabelMap.OrderCOD}</span>
                       </label>
                     </td>
@@ -506,13 +515,3 @@ function submitForm(form, mode, value) {
   </table>
 </form>
 
-<table width="100%">
-  <tr valign="top">
-    <td>
-      &nbsp;<a href="javascript:submitForm(document.checkoutInfoForm, 'CS', '');" class="buttontextbig">${uiLabelMap.OrderBacktoShoppingCart}</a>
-    </td>
-    <td align="right">
-      <a href="javascript:submitForm(document.checkoutInfoForm, 'DN', '');" class="buttontextbig">${uiLabelMap.OrderContinueToFinalOrderReview}</a>
-    </td>
-  </tr>
-</table>

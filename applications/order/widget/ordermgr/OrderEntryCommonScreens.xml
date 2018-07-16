@@ -77,11 +77,11 @@ under the License.
         <section>
             <widgets>
                 <include-screen name="orderHeaderInfo" location="component://order/widget/ordermgr/OrderEntryCartScreens.xml"/>
-                <include-screen name="orderShortcuts" location="component://order/widget/ordermgr/OrderEntryCartScreens.xml"/>
+                <!--<include-screen name="orderShortcuts" location="component://order/widget/ordermgr/OrderEntryCartScreens.xml"/>
                 <include-screen name="choosecatalog" location="component://order/widget/ordermgr/OrderEntryCatalogScreens.xml"/>
                 <include-screen name="keywordsearchbox" location="component://order/widget/ordermgr/OrderEntryCatalogScreens.xml"/>
                 <include-screen name="sidedeepcategory" location="component://order/widget/ordermgr/OrderEntryCatalogScreens.xml"/>
-                <include-screen name="compareproductslist" location="component://order/widget/ordermgr/OrderEntryCatalogScreens.xml"/>
+                <include-screen name="compareproductslist" location="component://order/widget/ordermgr/OrderEntryCatalogScreens.xml"/>-->
             </widgets>
         </section>
     </screen>
@@ -90,8 +90,8 @@ under the License.
             <widgets>
                 <include-screen name="orderHeaderInfo" location="component://order/widget/ordermgr/OrderEntryCartScreens.xml"/>
                 <include-screen name="minicart" location="component://order/widget/ordermgr/OrderEntryCartScreens.xml"/>
-                <include-screen name="sidedeepcategory" location="component://order/widget/ordermgr/OrderEntryCatalogScreens.xml"/>
-                <include-screen name="compareproductslist" location="component://order/widget/ordermgr/OrderEntryCatalogScreens.xml"/>
+                <!--<include-screen name="sidedeepcategory" location="component://order/widget/ordermgr/OrderEntryCatalogScreens.xml"/>
+                <include-screen name="compareproductslist" location="component://order/widget/ordermgr/OrderEntryCatalogScreens.xml"/>-->
             </widgets>
         </section>
     </screen>

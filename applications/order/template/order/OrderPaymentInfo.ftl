@@ -26,7 +26,6 @@ under the License.
       </#list>
       <#assign cardNumberDisplay = cardNumberDisplay + cardNumber[size .. size + 3]>
     <#else>
-      <#-- but if the card number has less than four digits (ie, it was entered incorrectly), display it in full -->
       <#assign cardNumberDisplay = cardNumber>
     </#if>
   </#if>
@@ -34,7 +33,7 @@ under the License.
 </#macro>
 
 <div class="screenlet">
-  <div class="screenlet-title-bar">
+  <#--<div class="screenlet-title-bar">
       <ul><li class="h3">&nbsp;${uiLabelMap.AccountingPaymentInformation}</li></ul>
       <br class="clear"/>
   </div>
@@ -71,7 +70,6 @@ under the License.
            </tr>
          </#list>
        </#list>
-       <#-- invoices -->
        <#if invoices?has_content>
          <tr><td colspan="4"><hr /></td></tr>
          <tr>
@@ -88,7 +86,6 @@ under the License.
        </#if>
      <#else>
 
-     <#-- order payment status -->
      <tr>
        <td align="center" valign="top" width="29%" class="label">&nbsp;${uiLabelMap.OrderStatusHistory}</td>
        <td width="1%">&nbsp;</td>
@@ -119,20 +116,17 @@ under the License.
             <tr><td colspan="4"><hr /></td></tr>
           </#if>
           <#assign outputted = "true">
-          <#-- try the paymentMethod first; if paymentMethodId is specified it overrides paymentMethodTypeId -->
           <#assign paymentMethod = orderPaymentPreference.getRelatedOne("PaymentMethod", false)!>
           <#if !paymentMethod?has_content>
             <#assign paymentMethodType = orderPaymentPreference.getRelatedOne("PaymentMethodType", false)>
             <#if paymentMethodType.paymentMethodTypeId == "EXT_BILLACT">
                 <#assign outputted = "false">
-                <#-- billing account -->
                 <#if billingAccount??>
                   <#if outputted?default("false") == "true">
                     <tr><td colspan="4"><hr /></td></tr>
                   </#if>
                   <tr>
                     <td align="right" valign="top" width="29%">
-                      <#-- billing accounts require a special OrderPaymentPreference because it is skipped from above section of OPPs -->
                       <div>&nbsp;<span class="label">${uiLabelMap.AccountingBillingAccount}</span>&nbsp;
                           <#if billingAccountMaxAmount?has_content>
                           <br />${uiLabelMap.OrderPaymentMaximumAmount}: <@ofbizCurrency amount=billingAccountMaxAmount?default(0.00) isoCode=currencyUomId/>
@@ -196,7 +190,6 @@ under the License.
                       ${finAccount.finAccountName!}
                       <br />
 
-                      <#-- Authorize and Capture transactions -->
                       <div>
                         <#if orderPaymentPreference.statusId != "PAYMENT_SETTLED">
                           <a href="/accounting/control/AuthorizeTransaction?orderId=${orderId!}&amp;orderPaymentPreferenceId=${orderPaymentPreference.orderPaymentPreferenceId}${StringUtil.wrapString(externalKeyParam)}" class="buttontext">${uiLabelMap.AccountingAuthorize}</a>
@@ -349,7 +342,6 @@ under the License.
                       </#if>
                       <br />
 
-                      <#-- Authorize and Capture transactions -->
                       <div>
                         <#if orderPaymentPreference.statusId != "PAYMENT_SETTLED">
                           <a href="/accounting/control/AuthorizeTransaction?orderId=${orderId!}&amp;orderPaymentPreferenceId=${orderPaymentPreference.orderPaymentPreferenceId}${StringUtil.wrapString(externalKeyParam)}" class="buttontext">${uiLabelMap.AccountingAuthorize}</a>
@@ -555,7 +547,6 @@ under the License.
           </tr>
         </#if>
 
-        <#-- invoices -->
         <#if invoices?has_content>
           <tr><td colspan="4"><hr /></td></tr>
           <tr>
@@ -632,5 +623,5 @@ under the License.
 </#if>
 </#if>
 </table>
-</div>
+</div>-->
 </div>

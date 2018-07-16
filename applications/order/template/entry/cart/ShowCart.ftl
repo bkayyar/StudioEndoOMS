@@ -92,7 +92,7 @@ under the License.
                       <@htmlTemplate.lookupField formName="quickaddform" name="add_product_id" id="add_product_id" fieldFormName="${fieldFormName}" value="${parameters.productId!}"/>
                       <a href="javascript:quicklookup(document.quickaddform.add_product_id)" class="buttontext">${uiLabelMap.OrderQuickLookup}</a>
                         <#if "SALES_ORDER" == shoppingCart.getOrderType()>
-                      <a href="javascript:quicklookupGiftCertificate()" class="buttontext">${uiLabelMap.OrderAddGiftCertificate}</a>
+                      <!--<a href="javascript:quicklookupGiftCertificate()" class="buttontext">${uiLabelMap.OrderAddGiftCertificate}</a>-->
                         </#if>
                       <#if "PURCHASE_ORDER" == shoppingCart.getOrderType()>
                         <a href="javascript:showQohAtp()" class="buttontext">${uiLabelMap.ProductAtpQoh}</a>
@@ -165,6 +165,14 @@ under the License.
                 <tr>
                   <td></td>
                   <td><input type="submit" class="smallSubmit" value="${uiLabelMap.OrderAddToOrder}"/></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td style="text-align:center"><a class="smallSubmit" href="<@ofbizUrl>quickcheckout</@ofbizUrl>">${uiLabelMap.OrderQuickFinalizeOrder}</a></td>
+                  <td></td>
                 </tr>
               </table>
             </form>
@@ -185,6 +193,7 @@ under the License.
                     ${uiLabelMap.OrderQuantity}:&nbsp;<input type="text" size="3" name="quantity" value="${requestParameters.quantity?default("1")}"/>
                     ${uiLabelMap.OrderPrice}:&nbsp;<input type="text" size="6" name="price" value="${requestParameters.price!}"/>
                     <input type="submit" class="smallSubmit" value="${uiLabelMap.OrderAddToOrder}"/>
+                    <a href="<@ofbizUrl>quickcheckout</@ofbizUrl>">${uiLabelMap.OrderQuickFinalizeOrder}</a>
                 </div>
             </form>
           </td>

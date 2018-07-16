@@ -135,7 +135,7 @@ under the License.
         <field name="productAssocTypeId"  title="${uiLabelMap.ManufacturingBomType}">
             <drop-down allow-empty="true">
                 <option key="MANUF_COMPONENT" description="${uiLabelMap.ManufacturingBillOfMaterials}"/>
-                <option key="ENGINEER_COMPONENT" description="${uiLabelMap.ManufacturingEngineeringBillOfMaterials}"/>
+                <!--<option key="ENGINEER_COMPONENT" description="${uiLabelMap.ManufacturingEngineeringBillOfMaterials}"/>-->
             </drop-down>
         </field>
         <field name="noConditionFind"><hidden value="Y"/><!-- if this isn't there then with all fields empty no query will be done --></field>

@@ -265,7 +265,7 @@ under the License.
             <exclude field-name="lastModifiedDate"/>
             <exclude field-name="lastModifiedByUserLogin"/>
         </auto-attributes>
-        <override name="fromDate" mode="INOUT" optional="true"/>
+        <!--<override name="fromDate" mode="INOUT" optional="true"/>-->
         <override name="price" optional="false"/>
     </service>
     <service name="updateProductPrice" default-entity-name="ProductPrice" engine="simple"

@@ -55,12 +55,12 @@ under the License.
                                                         <not><if-empty field="facilityId"/></not>
                                                     </condition>
                                                     <widgets>
-                                                        <container style="button-bar">
+                                                        <!--<container style="button-bar">
                                                             <link target="/workeffort/control/calendar" text="${uiLabelMap.CommonViewCalendar}" style="buttontext" url-mode="inter-app">
                                                                 <parameter param-name="facilityId"/>
                                                                 <parameter param-name="externalLoginKey" from-field="parameters.externalLoginKey"/>
                                                             </link>
-                                                        </container>
+                                                        </container>-->
                                                         <label style="h1">${uiLabelMap.ProductEditFacility} ${facility.facilityName} [${facilityId}]</label>
                                                         <platform-specific><html><html-template location="component://product/template/facility/EditFacility.ftl"/></html></platform-specific>
                                                     </widgets>
@@ -160,12 +160,12 @@ under the License.
                                                 <container style="page-title">
                                                     <label>${uiLabelMap.ProductEditFacility} ${facility.facilityName} [${facilityId}]</label>
                                                 </container>
-                                                <container style="button-bar button-style-1">
+                                                <!--<container style="button-bar button-style-1">
                                                     <link target="/workeffort/control/calendar" text="${uiLabelMap.CommonViewCalendar}" url-mode="inter-app">
                                                         <parameter param-name="facilityId"/>
                                                         <parameter param-name="externalLoginKey" from-field="parameters.externalLoginKey"/>
                                                     </link>
-                                                </container>
+                                                </container>-->
                                                 <platform-specific><html><html-template location="component://product/template/facility/EditFacility.ftl"/></html></platform-specific>
                                             </widgets>
                                         </section>
@@ -348,9 +348,9 @@ under the License.
                                     <link target="EditInventoryItem" text="${uiLabelMap.ProductNewInventoryItem}" style="buttontext create">
                                         <parameter param-name="facilityId" from-field="parameters.facilityId"/>
                                     </link>
-                                    <link target="SearchInventoryItemsByLabels" text="${uiLabelMap.ProductSearchInventoryItemsByLabels}" style="buttontext search">
+                                    <!--<link target="SearchInventoryItemsByLabels" text="${uiLabelMap.ProductSearchInventoryItemsByLabels}" style="buttontext search">
                                         <parameter param-name="facilityId" from-field="parameters.facilityId"/>
-                                    </link>
+                                    </link>-->
                                 </container>
                             </decorator-section>
                             <decorator-section name="search-options">
@@ -777,11 +777,11 @@ under the License.
                                     <not><if-empty field="facilityId"/></not>
                                 </condition>
                                 <widgets>
-                                    <link target="/workeffort/control/calendar" text="${uiLabelMap.CommonViewCalendar}" url-mode="inter-app">
+                                    <!--<link target="/workeffort/control/calendar" text="${uiLabelMap.CommonViewCalendar}" url-mode="inter-app">
                                         <parameter param-name="period" value="month"/>
                                         <parameter param-name="facilityId"/>
                                         <parameter param-name="externalLoginKey"/>
-                                    </link>
+                                    </link>-->
                                     <section>
                                         <condition>
                                             <if-service-permission service-name="facilityGenericPermission" main-action="CREATE"/>

@@ -47,12 +47,12 @@ under the License.
       <span class="tooltip">${uiLabelMap.CommonRequired}</span>
     </td>
   </tr>
-  <tr>
+  <#--<tr>
     <td class="label">${uiLabelMap.FormFieldTitle_parentFacilityId}</td>
     <td>
       <@htmlTemplate.lookupField value="${facility.parentFacilityId!}" formName="EditFacilityForm" name="parentFacilityId" id="parentFacilityId" fieldFormName="LookupFacility"/>
     </td>
-  </tr>
+  </tr>-->
   <tr>
     <td class="label">${uiLabelMap.ProductFacilityOwner}</td>
     <td>
@@ -61,7 +61,7 @@ under the License.
     </td>
   </tr>
   <tr>
-    <td class="label">${uiLabelMap.ProductFacilityDefaultWeightUnit}</td>
+    <#--<td class="label">${uiLabelMap.ProductFacilityDefaultWeightUnit}</td>
     <td>
       <select name="defaultWeightUomId">
           <option value=''>${uiLabelMap.CommonNone}</option>
@@ -73,7 +73,7 @@ under the License.
              >${uom.get("description",locale)?default(uom.uomId)}</option>
           </#list>
       </select>
-    </td>
+    </td>-->
   </tr>
   <tr>
     <td class="label">${uiLabelMap.ProductFacilityDefaultInventoryItemType}</td>
@@ -96,7 +96,7 @@ under the License.
       <span class="tooltip">${uiLabelMap.CommonRequired}</span>
     </td>
   </tr>
-  <tr>
+  <#--<tr>
     <td class="label">${uiLabelMap.ProductFacilitySize}</td>
     <td><input type="text" name="facilitySize" value="${facility.facilitySize!}" size="10" maxlength="20" /></td>
   </tr>
@@ -123,7 +123,7 @@ under the License.
     <td class="label">${uiLabelMap.ProductDefaultDaysToShip}</td>
     <td><input type="text" name="defaultDaysToShip" value="${facility.defaultDaysToShip!}" size="10" maxlength="20" /></td>
   </tr>
-  <tr>
+  <tr>-->
     <td>&nbsp;</td>
     <#if facilityId?has_content>
       <td><input type="submit" name="Update" value="${uiLabelMap.CommonUpdate}" /></td>

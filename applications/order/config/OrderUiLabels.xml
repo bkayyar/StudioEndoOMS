@@ -7372,7 +7372,7 @@
     <property key="OrderOrderEntryCurrencyAgreementShipDates">
         <value xml:lang="ar">أدخل لأمر البيع\الشراء, العملة والإتفاقيات وتواريخ الشحن</value>
         <value xml:lang="de">Eingabe Auftragswährung, Verträge und Versanddatum</value>
-        <value xml:lang="en">Enter Order Currency, Agreements, and Ship Dates</value>
+        <value xml:lang="en">Enter Order Information</value>
         <value xml:lang="es">Fijar moneda, acuerdos y fechas de envío</value>
         <value xml:lang="fr">Saisie de l'intitulé et de la devise de la commande</value>
         <value xml:lang="it">Inserire Valuta Ordine, Contratti, e Date Spedizione</value>

@@ -36,13 +36,12 @@ under the License.
         </#if>
       <#else>
         <#if shoppingCart.size() = 0>
-          <li class="disabled">${uiLabelMap.OrderQuickFinalizeOrder}</li>
-          <li class="disabled">${uiLabelMap.OrderFinalizeOrderDefault}</li>
-          <li class="disabled">${uiLabelMap.OrderFinalizeOrder}</li>
+          <#--<li class="disabled">${uiLabelMap.OrderQuickFinalizeOrder}</li>-->
+          <#--<li class="disabled">${uiLabelMap.OrderFinalizeOrderDefault}</li>
+          <li class="disabled">${uiLabelMap.OrderFinalizeOrder}</li>-->
         <#else>
-          <li><a href="<@ofbizUrl>quickcheckout</@ofbizUrl>">${uiLabelMap.OrderQuickFinalizeOrder}</a></li>
-          <li><a href="<@ofbizUrl>finalizeOrder?finalizeMode=default</@ofbizUrl>">${uiLabelMap.OrderFinalizeOrderDefault}</a></li>
-          <li><a href="<@ofbizUrl>finalizeOrder?finalizeMode=init</@ofbizUrl>">${uiLabelMap.OrderFinalizeOrder}</a></li>
+          <#--<li><a href="<@ofbizUrl>finalizeOrder?finalizeMode=default</@ofbizUrl>">${uiLabelMap.OrderFinalizeOrderDefault}</a></li>-->
+          <#--<li><a href="<@ofbizUrl>finalizeOrder?finalizeMode=init</@ofbizUrl>">${uiLabelMap.OrderFinalizeOrder}</a></li>-->
         </#if>
       </#if>
 

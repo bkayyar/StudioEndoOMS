@@ -31,9 +31,9 @@ under the License.
                     <td width="30%">${uiLabelMap.ProductProduct}</td>
                     <td width="33%">${uiLabelMap.CommonStatus}</td>
                     <td width="5%">${uiLabelMap.OrderQuantity}</td>
-                    <td width="10%" align="right">${uiLabelMap.OrderUnitList}</td>
+                    <#--<td width="10%" align="right">${uiLabelMap.OrderUnitList}</td>
                     <td width="10%" align="right">${uiLabelMap.OrderAdjustments}</td>
-                    <td width="10%" align="right">${uiLabelMap.OrderSubTotal}</td>
+                    <td width="10%" align="right">${uiLabelMap.OrderSubTotal}</td>-->
                     <td width="2%">&nbsp;</td>
                 </tr>
                 <#if !orderItemList?has_content>
@@ -88,7 +88,7 @@ under the License.
                                                                                         "statusId" : "ITEM_COMPLETED"},
                                                                                         null,
                                                                                         false)/>
-                                        <#if downloadContents?has_content>
+                                        <!--<#if downloadContents?has_content>
                                             <#list downloadContents as downloadContent>
                                                 <a href="/content/control/ViewSimpleContent?contentId=${downloadContent.contentId}" class="buttontext" target="_blank">${uiLabelMap.ContentDownload}</a>&nbsp;
                                             </#list>
@@ -98,7 +98,7 @@ under the License.
                                         <#if orderItemContentWrapper.get("IMAGE_URL", "url")?has_content>
                                             <a href="<@ofbizUrl>viewimage?orderId=${orderId}&amp;orderItemSeqId=${orderItem.orderItemSeqId}&amp;orderContentTypeId=IMAGE_URL</@ofbizUrl>"
                                                target="_orderImage" class="buttontext">${uiLabelMap.OrderViewImage}</a>
-                                        </#if>
+                                        </#if>-->
                                     </div>
                                 </td>
                             </#if>
@@ -315,7 +315,7 @@ under the License.
                                         </div>
                                     </div>
                                 </td>
-                                <td align="right" valign="top" nowrap="nowrap">
+                                <#--<td align="right" valign="top" nowrap="nowrap">
                                     <@ofbizCurrency amount=orderItem.unitPrice isoCode=currencyUomId/>
                                     / <@ofbizCurrency amount=orderItem.unitListPrice isoCode=currencyUomId/>
                                 </td>
@@ -328,7 +328,7 @@ under the License.
                                     <#else>
                                         <@ofbizCurrency amount=0.00 isoCode=currencyUomId/>
                                     </#if>
-                                </td>
+                                </td>-->
                                 <td>&nbsp;</td>
                             </#if>
                         </tr>
@@ -421,7 +421,7 @@ under the License.
                             </tr>
                         </#if>
                         <#-- now show adjustment details per line item -->
-                        <#assign orderItemAdjustments = Static["org.apache.ofbiz.order.order.OrderReadHelper"].getOrderItemAdjustmentList(orderItem, orderAdjustments)>
+                        <#--<#assign orderItemAdjustments = Static["org.apache.ofbiz.order.order.OrderReadHelper"].getOrderItemAdjustmentList(orderItem, orderAdjustments)>
                         <#if orderItemAdjustments?? && orderItemAdjustments?has_content>
                             <#list orderItemAdjustments as orderItemAdjustment>
                                 <#assign adjustmentType = orderItemAdjustment.getRelatedOne("OrderAdjustmentType", true)>
@@ -466,9 +466,9 @@ under the License.
                                     <td colspan="2">&nbsp;</td>
                                 </tr>
                             </#list>
-                        </#if>
+                        </#if>-->
                         <#-- now show price info per line item -->
-                        <#assign orderItemPriceInfos = orderReadHelper.getOrderItemPriceInfos(orderItem)>
+                        <#--<#assign orderItemPriceInfos = orderReadHelper.getOrderItemPriceInfos(orderItem)>
                         <#if orderItemPriceInfos?? && orderItemPriceInfos?has_content>
                             <tr<#if itemClass == "1"> class="alternate-row"</#if>>
                                 <td colspan="7">&nbsp;</td>
@@ -486,7 +486,7 @@ under the License.
                                     <td colspan="3">&nbsp;</td>
                                 </tr>
                             </#list>
-                        </#if>
+                        </#if>-->
                         <#-- now show survey information per line item -->
                         <#assign orderItemSurveyResponses = Static["org.apache.ofbiz.order.order.OrderReadHelper"].getOrderItemSurveyResponse(orderItem)>
                         <#if orderItemSurveyResponses?? && orderItemSurveyResponses?has_content>
@@ -715,7 +715,7 @@ under the License.
                     </#list>
                 </#if>
                 <tr><td colspan="7"><hr /></td></tr>
-                <#list orderHeaderAdjustments as orderHeaderAdjustment>
+                <#--<#list orderHeaderAdjustments as orderHeaderAdjustment>
                     <#assign adjustmentType = orderHeaderAdjustment.getRelatedOne("OrderAdjustmentType", false)>
                     <#assign adjustmentAmount = Static["org.apache.ofbiz.order.order.OrderReadHelper"].calcOrderAdjustment(orderHeaderAdjustment, orderSubTotal)>
                     <#if adjustmentAmount != 0>
@@ -731,9 +731,9 @@ under the License.
                             <td>&nbsp;</td>
                         </tr>
                     </#if>
-                </#list>
+                </#list>-->
                 <#-- subtotal -->
-                <tr>
+                <#--<tr>
                     <td colspan="1"></td>
                     <td colspan="6"><hr /></td>
                 </tr>
@@ -745,9 +745,9 @@ under the License.
                         <@ofbizCurrency amount=orderSubTotal isoCode=currencyUomId/>
                     </td>
                     <td>&nbsp;</td>
-                </tr>
+                </tr>-->
                 <#-- other adjustments -->
-                <tr>
+                <#--<tr>
                     <td align="right" colspan="5">
                         <span class="label">${uiLabelMap.OrderTotalOtherOrderAdjustments}</span>
                     </td>
@@ -755,9 +755,9 @@ under the License.
                         <@ofbizCurrency amount=otherAdjAmount isoCode=currencyUomId/>
                     </td>
                     <td>&nbsp;</td>
-                </tr>
+                </tr>-->
                 <#-- shipping adjustments -->
-                <tr>
+                <#--<tr>
                     <td align="right" colspan="5">
                         <span class="label">${uiLabelMap.OrderTotalShippingAndHandling}</span>
                     </td>
@@ -765,9 +765,9 @@ under the License.
                         <@ofbizCurrency amount=shippingAmount isoCode=currencyUomId/>
                     </td>
                     <td>&nbsp;</td>
-                </tr>
+                </tr>-->
                 <#-- tax adjustments -->
-                <tr>
+                <#--<tr>
                     <td align="right" colspan="5">
                         <span class="label">${uiLabelMap.OrderTotalSalesTax}</span>
                     </td>
@@ -775,9 +775,9 @@ under the License.
                         <@ofbizCurrency amount=taxAmount isoCode=currencyUomId/>
                     </td>
                     <td>&nbsp;</td>
-                </tr>
+                </tr>-->
                 <#-- grand total -->
-                <tr>
+                <#--<tr>
                     <td align="right" colspan="5">
                         <span class="label">${uiLabelMap.OrderTotalDue}</span>
                     </td>
@@ -785,7 +785,7 @@ under the License.
                         <@ofbizCurrency amount=grandTotal isoCode=currencyUomId/>
                     </td>
                     <td>&nbsp;</td>
-                </tr>
+                </tr>-->
             </table>
         </div>
     </div>

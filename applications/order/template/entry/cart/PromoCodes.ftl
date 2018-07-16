@@ -19,7 +19,7 @@ under the License.
 
 <#if shoppingCart.getOrderType() == "SALES_ORDER">
 <div class="screenlet">
-    <div class="screenlet-title-bar">
+    <#--<div class="screenlet-title-bar">
         <div class="h3">&nbsp;${uiLabelMap.OrderPromotionCouponCodes}</div>
     </div>
     <div class="screenlet-body">
@@ -36,6 +36,6 @@ under the License.
           </#if>
         </form>
       </div>
-    </div>
+    </div>-->
 </div>
 </#if>

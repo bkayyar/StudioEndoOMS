@@ -961,7 +961,7 @@ under the License.
                 </xs:simpleType>
             </xs:attribute>
             <xs:attribute type="xs:string" name="default-value" />
-            <xs:attribute name="default-option-from" default="equals">
+            <xs:attribute name="default-option-from" default="sameDay">
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
                         <xs:enumeration value="equals" />

@@ -77,7 +77,7 @@ under the License.
                 </entity-options>
             </drop-down>
         </field>
-        <field position="1" name="isVirtual" title="${uiLabelMap.ProductVirtualProduct}">
+        <!--<field position="1" name="isVirtual" title="${uiLabelMap.ProductVirtualProduct}">
             <drop-down><option key="N" description="${uiLabelMap.CommonN}"/><option key="Y" description="${uiLabelMap.CommonY}"/></drop-down>
         </field>
         <field position="2" name="isVariant" title="${uiLabelMap.ProductVariantProduct}">
@@ -90,26 +90,26 @@ under the License.
                     <entity-order-by field-name="sequenceId"/>
                 </entity-options>
             </drop-down>
-        </field>
-        <field position="1" name="primaryProductCategoryId" title="${uiLabelMap.ProductPrimaryCategory}">
+        </field>-->
+        <!--<field position="1" name="primaryProductCategoryId" title="${uiLabelMap.ProductPrimaryCategory}">
             <drop-down allow-empty="true">
                 <entity-options entity-name="ProductCategoryAndMember" key-field-name="productCategoryId" description="${categoryName} [${productCategoryId}]">
                     <entity-constraint name="productId" env-name="product.productId"/>
                     <entity-order-by field-name="categoryName"/>
                 </entity-options>
             </drop-down>
-        </field>
+        </field>-->
 
         <field position="1" name="internalName" title="${uiLabelMap.ProductInternalName}" required-field="true"><text size="30" maxlength="255"/></field>
         <field position="2" name="brandName" title="${uiLabelMap.ProductBrandName}" ><text size="30" maxlength="60"/></field>
         <field name="productName" title="${uiLabelMap.ProductProductName}"><text size="30" maxlength="255"/></field>
-        <field name="manufacturerPartyId" title="${uiLabelMap.ProductOemPartyId}" ><text size="20" maxlength="20"/></field>
+        <!--<field name="manufacturerPartyId" title="${uiLabelMap.ProductOemPartyId}" ><text size="20" maxlength="20"/></field>-->
         <field name="comments" title="${uiLabelMap.CommonComments}"><text size="60" maxlength="250"/></field>
 
-        <field position="1" name="introductionDate" title="${uiLabelMap.CommonIntroductionDate}" red-when="after-now"><date-time/></field>
+        <!--<field position="1" name="introductionDate" title="${uiLabelMap.CommonIntroductionDate}" red-when="after-now"><date-time/></field>
         <field position="2" name="releaseDate" title="${uiLabelMap.CommonReleaseDate}" red-when="after-now"><date-time/></field>
         <field position="3" name="salesDiscontinuationDate" title="${uiLabelMap.ProductSalesThruDate}" red-when="before-now"><date-time/></field>
-        <field position="4" name="supportDiscontinuationDate" title="${uiLabelMap.ProductSupportThruDate}" red-when="before-now"><date-time/></field>
+        <field position="4" name="supportDiscontinuationDate" title="${uiLabelMap.ProductSupportThruDate}" red-when="before-now"><date-time/></field>-->
 
         <field name="salesDiscWhenNotAvail" title="${uiLabelMap.ProductSalesDiscontinuationNotAvailable}">
             <drop-down allow-empty="true"><option key="Y" description="${uiLabelMap.CommonY}"/><option key="N" description="${uiLabelMap.CommonN}"/></drop-down>
@@ -138,7 +138,7 @@ under the License.
             <display-entity entity-name="InventoryItemType" />
         </field>
 
-        <field name="lotIdFilledIn" title="${uiLabelMap.ProductLotId}">
+        <!--<field name="lotIdFilledIn" title="${uiLabelMap.ProductLotId}">
             <drop-down allow-empty="false">
                 <option key="Allowed" description="${uiLabelMap.lotIdFilledInAllowed}"/>
                 <option key="Mandatory" description="${uiLabelMap.lotIdFilledInMandatory}"/>
@@ -260,7 +260,8 @@ under the License.
 
         <field name="contentInfoText" title="${uiLabelMap.ProductContentInfoText}" widget-style="tooltip">
             <display description="${uiLabelMap.ProductNoteForContentOptions}" also-hidden="false"/>
-        </field>
+        </field>-->
+        
         <!-- These go on the Content tab-button page
         <field name="productName"><text size="30" maxlength="60"/></field>
         <field name="description"><textarea cols="60" rows="2"/></field>
@@ -280,9 +281,9 @@ under the License.
         <field use-when="product!=null" position="2" name="createdByText" title="${uiLabelMap.CommonCreatedBy}:">
             <display description="[${product.createdByUserLogin}] ${uiLabelMap.CommonOn} ${product.createdDate}" also-hidden="false"/>
         </field>
-        <field name="orderDecimalQuantity" >
+        <!--<field name="orderDecimalQuantity" >
             <drop-down allow-empty="true" ><option key="Y" description="${uiLabelMap.CommonY}"/><option key="N" description="${uiLabelMap.CommonN}"/></drop-down>
-        </field>
+        </field>-->
         <sort-order>
             <field-group>
                 <sort-field name="productId"/>
@@ -371,7 +372,7 @@ under the License.
         <field name="newInternalName" title="${uiLabelMap.ProductInternalName}"><text size="30" maxlength="255"/></field>
         <field name="newProductName" title="${uiLabelMap.ProductProductName}"><text size="30" maxlength="60"/></field>
         <field name="newDescription" title="${uiLabelMap.ProductProductDescription}" widget-style="textAreaBox"><textarea cols="60" rows="2" maxlength="255"/></field>
-        <field name="newLongDescription" title="${uiLabelMap.ProductLongDescription}" widget-style="textAreaBox dojo-ResizableTextArea"><textarea cols="60" rows="7"/></field>
+        <!--<field name="newLongDescription" title="${uiLabelMap.ProductLongDescription}" widget-style="textAreaBox dojo-ResizableTextArea"><textarea cols="60" rows="7"/></field>-->
         <field name="duplicateTitle" title="${uiLabelMap.CommonDuplicate}" title-style="h1" map-name="dummy">
             <display description=""/>
         </field>
@@ -405,7 +406,7 @@ under the License.
         <field name="duplicatePrices" position="2" title="${uiLabelMap.ProductPrices}"><check all-checked="true"/></field>
         <field name="duplicateIDs" position="3" title="${uiLabelMap.CommonId}"><check all-checked="true"/></field>
         <field name="duplicateContent" position="4" title="${uiLabelMap.ProductContent}"><check all-checked="true"/></field>
-         <field name="duplicateCategoryMembers" position="1" title="${uiLabelMap.ProductCategoryMembers}"><check all-checked="true"/></field>
+        <field name="duplicateCategoryMembers" position="1" title="${uiLabelMap.ProductCategoryMembers}"><check all-checked="true"/></field>
         <field name="duplicateAttributes" position="2" title="${uiLabelMap.ProductAttributes}"><check all-checked="true"/></field>
         <field name="duplicateFacilities" position="3" title="${uiLabelMap.ProductFacilities}"><check all-checked="true"/></field>
         <field name="duplicateLocations" position="4" title="${uiLabelMap.ProductLocations}"><check all-checked="true"/></field>
@@ -416,23 +417,23 @@ under the License.
     <form name="AddProductPrice" type="single" target="createProductPrice" title=""
         header-row-style="header-row" default-table-style="basic-table">
         <auto-fields-service service-name="createProductPrice"/>
-        <field name="fromDate" required-field="true"><date-time default-value="${nowTimestamp}"/></field>
+        <field name="fromDate" required-field="true" value="${nowTimestamp}"><hidden/></field>
         <field name="productId"><hidden/></field>
-        <field name="productPriceTypeId" title="${uiLabelMap.ProductPriceType}">
-            <drop-down allow-empty="false" no-current-selected-key="DEFAULT_PRICE">
+        <field name="productPriceTypeId" title="${uiLabelMap.ProductPriceType}"> 
+            <drop-down allow-empty="false" no-current-selected-key="DEFAULT_PRICE"> 
                 <entity-options entity-name="ProductPriceType">
                     <entity-order-by field-name="description"/>
                 </entity-options>
             </drop-down>
         </field>
-        <field name="productPricePurposeId" title="${uiLabelMap.CommonPurpose}">
+        <field name="productPricePurposeId" title="${uiLabelMap.CommonPurpose}" style="display:none" default-value="PURCHASE">
             <drop-down allow-empty="false" no-current-selected-key="PURCHASE">
                 <entity-options entity-name="ProductPricePurpose">
                     <entity-order-by field-name="description"/>
                 </entity-options>
             </drop-down>
         </field>
-        <field name="currencyUomId" title="${uiLabelMap.ProductCurrencyUomId}">
+        <field name="currencyUomId" title="${uiLabelMap.ProductCurrencyUomId}" value="${defaultOrganizationPartyCurrencyUomId}">
             <drop-down allow-empty="false" no-current-selected-key="${defaultOrganizationPartyCurrencyUomId}">
                 <entity-options key-field-name="uomId" description="${description} - ${abbreviation}" entity-name="Uom">
                     <entity-constraint name="uomTypeId" operator="equals" value="CURRENCY_MEASURE"/>
@@ -440,66 +441,66 @@ under the License.
                 </entity-options>
             </drop-down>
         </field>
-        <field name="productStoreGroupId" title="${uiLabelMap.ProductProductStoreGroupId}">
+        <field name="productStoreGroupId" title="${uiLabelMap.ProductProductStoreGroupId}" value="_NA_">
             <drop-down allow-empty="false" no-current-selected-key="_NA_">
                 <entity-options entity-name="ProductStoreGroup" description="${productStoreGroupName}">
                     <entity-order-by field-name="productStoreGroupName"/>
                 </entity-options>
             </drop-down>
         </field>
-        <field name="termUomId">
-            <drop-down allow-empty="true">
+        <field name="termUomId"><hidden/>
+            <!--<drop-down allow-empty="true">
                 <entity-options entity-name="UomAndType" key-field-name="uomId" description="${typeDescription}: ${description} (${abbreviation})">
                     <entity-constraint name="uomTypeId" operator="not-equals" value="CURRENCY_MEASURE"/>
                     <entity-order-by field-name="typeDescription"/>
                     <entity-order-by field-name="description"/>
                 </entity-options>
-            </drop-down>
+            </drop-down>-->
         </field>
-        <field name="customPriceCalcService">
-            <drop-down allow-empty="true">
+        <field name="customPriceCalcService"><hidden/>
+            <!--<drop-down allow-empty="true">
                 <entity-options entity-name="CustomMethod" key-field-name="customMethodId">
                     <entity-constraint name="customMethodTypeId" operator="equals" value="PRICE_FORMULA"/>
                 </entity-options>
-            </drop-down>
+            </drop-down>-->
         </field>
-        <field name="taxAuthPartyId"><lookup target-form-name="LookupPartyName"/></field>
-        <field name="taxAuthGeoId"><lookup target-form-name="LookupGeo"/></field>
+        <field name="taxAuthPartyId"><hidden/></field>
+        <field name="taxAuthGeoId"><hidden/></field>
         <field name="submitButton" title="${uiLabelMap.CommonCreate}" widget-style="smallSubmit"><submit button-type="button"/></field>
     </form>
     <form name="UpdateProductPrice" type="list" target="updateProductPrice" title="" list-name="productPrices"
         odd-row-style="alternate-row" default-table-style="basic-table" paginate-target="EditProductPrices" separate-columns="true">
         <auto-fields-service service-name="updateProductPrice" map-name="productPrice"/>
         <field name="productId"><hidden/></field>
-        <field name="productPriceTypeId" title="${uiLabelMap.ProductPriceType}"><display-entity entity-name="ProductPriceType"/></field>
-        <field name="productPricePurposeId" title="${uiLabelMap.CommonPurpose}"><display-entity entity-name="ProductPricePurpose"/></field>
-        <field name="currencyUomId" title="${uiLabelMap.ProductCurrency}" ><display-entity entity-name="Uom" key-field-name="uomId" description="${description} [${uomId}]"/></field>
-        <field name="productStoreGroupId" title="${uiLabelMap.ProductProductStoreGroup}"><display-entity entity-name="ProductStoreGroup" description="${productStoreGroupName}"/></field>
-        <field name="fromDate" title="${uiLabelMap.CommonFromDateTime}"><display/></field>
+        <field name="productPriceTypeId" title="${uiLabelMap.ProductPriceType}"><hidden/></field>
+        <field name="productPricePurposeId" title="${uiLabelMap.CommonPurpose}"><hidden/></field>
+        <field name="currencyUomId" title="${uiLabelMap.ProductCurrency}" ><hidden/></field>
+        <field name="productStoreGroupId" title="${uiLabelMap.ProductProductStoreGroup}"><hidden/></field>
+        <field name="fromDate" title="${uiLabelMap.CommonFromDateTime}"><hidden/></field>
 
-        <field name="termUomId">
-            <drop-down allow-empty="true">
+        <field name="termUomId"><hidden/>
+            <!--<drop-down allow-empty="true">
                 <entity-options entity-name="UomAndType" key-field-name="uomId" description="${typeDescription}: ${description} (${abbreviation})">
                     <entity-constraint name="uomTypeId" operator="not-equals" value="CURRENCY_MEASURE"/>
                     <entity-order-by field-name="typeDescription"/>
                     <entity-order-by field-name="uomId"/>
                 </entity-options>
-            </drop-down>
+            </drop-down>-->
         </field>
-        <field name="customPriceCalcService">
-            <drop-down allow-empty="true">
+        <field name="customPriceCalcService"><hidden/>
+            <!--<drop-down allow-empty="true">
                 <entity-options entity-name="CustomMethod" key-field-name="customMethodId">
                     <entity-constraint name="customMethodTypeId" operator="equals" value="PRICE_FORMULA"/>
                 </entity-options>
-            </drop-down>
+            </drop-down>-->
         </field>
 
-        <field name="lastUpdatedByText" title="${uiLabelMap.ProductLastModifiedBy}:">
-            <display description="[${lastModifiedByUserLogin}] ${uiLabelMap.CommonOn} ${lastModifiedDate}" also-hidden="false"/>
+        <field name="lastUpdatedByText" title="${uiLabelMap.ProductLastModifiedBy}:"><hidden/>
+            <!--<display description="[${lastModifiedByUserLogin}] ${uiLabelMap.CommonOn} ${lastModifiedDate}" also-hidden="false"/>-->
         </field>
 
-        <field name="taxAuthPartyId"><lookup target-form-name="LookupPartyName"/></field>
-        <field name="taxAuthGeoId"><lookup target-form-name="LookupGeo"/></field>
+        <field name="taxAuthPartyId"><hidden/></field>
+        <field name="taxAuthGeoId"><hidden/></field>
 
         <field name="submitButton" title="${uiLabelMap.CommonUpdate}"><submit button-type="button"/></field>
 
@@ -1926,7 +1927,7 @@ under the License.
     <form name="AddProductWorkEffort" target="createWorkEffortGoodStandard" title="" type="single"
         header-row-style="header-row" default-table-style="basic-table">
         <auto-fields-service service-name="createWorkEffortGoodStandard"/>
-        <field name="fromDate" required-field="true"><date-time default-value="${nowTimestamp}"/></field>
+        <field name="fromDate" required-field="true" style="display:none"><date-time default-value="${nowTimestamp}"/></field>
         <field name="productId"><hidden value="${parameters.productId}"/></field>
         <field name="workEffortId">
             <lookup target-form-name="LookupWorkEffort"/>

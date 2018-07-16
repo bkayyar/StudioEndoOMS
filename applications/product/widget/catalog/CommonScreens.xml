@@ -258,11 +258,11 @@ under the License.
             <actions>
                 <script location="component://product/groovyScripts/catalog/find/KeywordSearchBox.groovy"/>
             </actions>
-            <widgets>
+            <!--<widgets>
                 <screenlet id="ProductKeywordsPanel" title="${uiLabelMap.ProductSearchProducts}" collapsible="true">
                     <platform-specific><html><html-template location="component://product/template/find/KeywordSearchBox.ftl"/></html></platform-specific>
                 </screenlet>
-            </widgets>
+            </widgets>-->
         </section>
     </screen>
     <screen name="miniproductlist">
@@ -270,13 +270,13 @@ under the License.
             <actions>
                 <script location="component://product/groovyScripts/catalog/find/MiniProductList.groovy"/>
             </actions>
-            <widgets>
+            <!--<widgets>
                 <screenlet id="ProductCategoryProductsPanel" title="${uiLabelMap.ProductCategoryProducts}" collapsible="true">
                     <container id="miniproductlist">
                         <platform-specific><html><html-template location="component://product/template/find/MiniProductList.ftl"/></html></platform-specific>
                     </container>
                 </screenlet>
-            </widgets>
+            </widgets>-->
         </section>
     </screen>
     <screen name="ChooseTopCategory">
@@ -326,12 +326,12 @@ under the License.
             <actions>
                 <script location="component://product/groovyScripts/catalog/category/CategoryTree.groovy"/>
             </actions>
-            <widgets>
+            <!--<widgets>
                 <screenlet id="ProductBrowseCategoriesPanel" title="${uiLabelMap.ProductBrowseCatalogeAndCategories}" collapsible="true">
                     <container id="EditDocumentTree"/>
                     <platform-specific><html><html-template location="component://product/template/category/CategoryTree.ftl"/></html></platform-specific>
                 </screenlet>
-            </widgets>
+            </widgets>-->
         </section>
     </screen>
 

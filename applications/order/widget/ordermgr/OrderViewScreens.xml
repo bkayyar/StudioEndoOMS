@@ -86,13 +86,13 @@ under the License.
                 <container id="split50">
                     <container style="lefthalf">
                         <include-screen name="orderinfo"/>
-                        <include-screen name="orderterms"/>
-                        <include-screen name="orderpaymentinfo"/>
+                        <!--<include-screen name="orderterms"/>
+                        <include-screen name="orderpaymentinfo"/>-->
                         <include-screen name="projectAssoOrder"/>
                     </container>
                     <container style="righthalf">
                         <include-screen name="ordercontactinfo"/>
-                        <include-screen name="OrderRoleInfo"/>
+                        <!--<include-screen name="OrderRoleInfo"/>-->
                         <include-screen name="ordershippinginfo"/>
                         <include-screen name="OrderSalesReps"/>
                     </container>

@@ -55,14 +55,14 @@ under the License.
             </drop-down>
         </field>
 
-        <field name="salesChannelEnumId">
+        <!--<field name="salesChannelEnumId">
             <drop-down>
                 <entity-options entity-name="Enumeration" key-field-name="enumId">
                     <entity-constraint name="enumTypeId" operator="equals" value="ORDER_SALES_CHANNEL"/>
                     <entity-order-by field-name="description"/>
                 </entity-options>
             </drop-down>
-        </field>
+        </field>-->
 
         <field name="currencyUom">
             <drop-down no-current-selected-key="${defaultOrganizationPartyCurrencyUomId}">

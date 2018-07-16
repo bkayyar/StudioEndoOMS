@@ -23,14 +23,13 @@ under the License.
   <div class="screenlet-title-bar">
       <ul>
         <li class="h3">${uiLabelMap.OrderOrderEntryCurrencyAgreementShipDates}</li>
-        <li><a href="javascript:document.agreementForm.submit()">${uiLabelMap.CommonContinue}</a></li>
       </ul>
       <br class="clear" />
   </div>
   <div class="screenlet-body">
     <table>
 
-      <#if agreements??>
+      <#--<#if agreements??>
       <tr><td colspan="4">&nbsp;<input type='hidden' name='hasAgreements' value='Y'/></td></tr>
       
       <tr>
@@ -75,7 +74,7 @@ under the License.
             </div>
           </td>
         </tr>
-      </#if>
+      </#if>-->
 
       <#if "PURCHASE_ORDER" == cart.getOrderType()>
         <tr>
@@ -114,7 +113,7 @@ under the License.
       </tr>
       </#if>
 
-      <tr>
+      <#--<tr>
         <td>&nbsp;</td>
         <td align='right' valign='middle' nowrap="nowrap">
           <div class='tableheadtext'>
@@ -191,7 +190,7 @@ under the License.
         <td>
             <@htmlTemplate.renderDateTimeField name="shipBeforeDate" event="" action="" value="" className="" alert="" title="Format: yyyy-MM-dd HH:mm:ss.SSS" size="25" maxlength="30" id="shipBeforeDate1" dateType="date" shortDateInput=false timeDropdownParamName="" defaultDateTimeString="" localizedIconTitle="" timeDropdown="" timeHourName="" classString="" hour1="" hour2="" timeMinutesName="" minutes="" isTwelveHour="" ampmName="" amSelected="" pmSelected="" compositeType="" formName=""/>
         </td>
-      </tr>
+      </tr>-->
 
       <#if cart.getOrderType() == "PURCHASE_ORDER">
         <tr>
@@ -210,5 +209,9 @@ under the License.
 
     </table>
   </div>
+  <div style="text-align:center">
+      <input type="button" class="smallSubmit" value="${uiLabelMap.CommonContinue}" onclick="javascript:document.agreementForm.submit()">
+  </div>
+  <br></br>
 </div>
 </form>

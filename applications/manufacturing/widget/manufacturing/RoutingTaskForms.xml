@@ -122,11 +122,11 @@ under the License.
         <field name="workEffortPurposeTypeId" title="${uiLabelMap.ManufacturingTaskPurpose}">
             <display-entity entity-name="WorkEffortPurposeType"/>
         </field>
-        <field name="fixedAssetId">
+        <!--<field name="fixedAssetId">
             <display-entity entity-name="FixedAsset" description="${fixedAssetName}"/>
         </field>
         <field name="estimatedSetupMillis" title="${uiLabelMap.ManufacturingTaskEstimatedSetupMillis}"><display/></field>
-        <field name="estimatedMilliSeconds" title="${uiLabelMap.ManufacturingTaskEstimatedMilliSeconds}"><display/></field>
+        <field name="estimatedMilliSeconds" title="${uiLabelMap.ManufacturingTaskEstimatedMilliSeconds}"><display/></field>-->
     </form>
     <form name="EditRoutingTask" type="single" target="UpdateRoutingTask" title="" default-map-name="routingTask"
         header-row-style="header-row" default-table-style="basic-table">
@@ -218,8 +218,8 @@ under the License.
             <display-entity entity-name="WorkEffort" key-field-name="workEffortId" description="[${workEffortId}] ${workEffortName}"/>
         </field>
         <field name="sequenceNum" title="${uiLabelMap.CommonSequenceNum}"><display/></field>
-        <field name="fromDate" title="${uiLabelMap.CommonFromDate}"><display/></field>
-        <field name="thruDate" title="${uiLabelMap.CommonThruDate}"><display/></field>
+        <!--<field name="fromDate" title="${uiLabelMap.CommonFromDate}"><display/></field>
+        <field name="thruDate" title="${uiLabelMap.CommonThruDate}"><display/></field>-->
         <field name="editRouting" title=" " widget-style="buttontext">
             <hyperlink description="${uiLabelMap.ManufacturingEditRouting}" target="EditRouting" also-hidden="false">
                 <parameter param-name="workEffortId" from-field="workEffortIdFrom"/>
@@ -239,10 +239,10 @@ under the License.
             </hyperlink>
         </field>
         <field name="workEffortAssocTypeId" ><hidden/></field>
-        <field name="fromDate" title="${uiLabelMap.CommonFromDate}" ><display/></field>
+        <!--<field name="fromDate" title="${uiLabelMap.CommonFromDate}" ><display/></field>
         <field name="thruDate" title="${uiLabelMap.CommonThruDate}" ><display/></field>
         <field name="workEffortToSetup" title="${uiLabelMap.ManufacturingTaskEstimatedSetupMillis}" ><display/></field>
-        <field name="workEffortToRun" title="${uiLabelMap.ManufacturingTaskEstimatedMilliSeconds}" ><display/></field>
+        <field name="workEffortToRun" title="${uiLabelMap.ManufacturingTaskEstimatedMilliSeconds}" ><display/></field>-->
         <field name="deleteLink" title=" " widget-style="buttontext">
             <hyperlink description="${uiLabelMap.CommonDelete}" target="RemoveRoutingTaskAssoc" also-hidden="false">
                 <parameter param-name="workEffortId" from-field="workEffortIdFrom"/>

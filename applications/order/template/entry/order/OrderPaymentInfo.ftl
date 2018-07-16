@@ -19,13 +19,11 @@ under the License.
 
 <#if paymentMethod?has_content || paymentMethodType?has_content || billingAccount?has_content>
 <div class="screenlet">
-    <div class="screenlet-title-bar">
+    <#--<div class="screenlet-title-bar">
         <div class="h3">${uiLabelMap.AccountingPaymentInformation}</div>
     </div>
     <div class="screenlet-body">
-        <#-- order payment info -->
       <table width="100%" border="0" cellpadding="1">
-        <#-- offline payment address infomation :: change this to use Company's address -->
         <#if !paymentMethod?has_content && paymentMethodType?has_content>
           <tr>
             <#if paymentMethodType.paymentMethodTypeId == "EXT_OFFLINE">
@@ -54,7 +52,6 @@ under the License.
         </#if>
         <#if paymentMethod?has_content>
           <#assign outputted = true>
-          <#-- credit card info -->
           <#if creditCard?has_content>
             <tr>
               <td align="right" valign="top" width="15%">
@@ -74,7 +71,6 @@ under the License.
                 </div>
               </td>
             </tr>
-          <#-- EFT account info -->
           <#elseif eftAccount?has_content>
             <tr>
               <td align="right" valign="top" width="15%">
@@ -92,7 +88,6 @@ under the License.
             </tr>
           </#if>
         </#if>
-        <#-- billing account info -->
         <#if billingAccount?has_content>
           <#if outputted?default(false)>
             <tr><td colspan="3"><hr /></td></tr>
@@ -111,6 +106,6 @@ under the License.
           </tr>
         </#if>
       </table>
-    </div>
+    </div>-->
 </div>
 </#if>

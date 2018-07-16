@@ -58,7 +58,7 @@ under the License.
             </tr>
             <tr><td colspan="7"><hr /></td></tr>
         </#if>
-        <#if orderTerms?has_content>
+        <#--<#if orderTerms?has_content>
             <tr>
                 <td align="right" valign="top" width="15%">
                     <div>&nbsp;<b>${uiLabelMap.OrderOrderTerms}</b></div>
@@ -92,7 +92,7 @@ under the License.
                 </td>
             </tr>
             <tr><td colspan="7"><hr /></td></tr>
-        </#if>
+        </#if>-->
         <#-- tracking number -->
         <#if trackingNumber?has_content>
             <tr>
@@ -108,7 +108,7 @@ under the License.
             <tr><td colspan="7"><hr /></td></tr>
         </#if>
         <#-- splitting preference -->
-            <tr>
+            <!--<tr>
                 <td align="right" valign="top" width="15%">
                     <div>&nbsp;<b>${uiLabelMap.OrderSplittingPreference}</b></div>
                 </td>
@@ -119,9 +119,9 @@ under the License.
                         <#if maySplit?default("Y") == "Y">${uiLabelMap.FacilityShipAvailable}</#if>
                     </div>
                 </td>
-            </tr>
+            </tr>-->
         <#-- shipping instructions -->
-        <#if shippingInstructions?has_content>
+        <#--<#if shippingInstructions?has_content>
             <tr><td colspan="7"><hr /></td></tr>
             <tr>
                 <td align="right" valign="top" width="15%">
@@ -133,10 +133,10 @@ under the License.
                 </td>
             </tr>
         </#if>
-            <tr><td colspan="7"><hr /></td></tr>
-        <#if orderType != "PURCHASE_ORDER" && (productStore.showCheckoutGiftOptions)! != "N">
+            <tr><td colspan="7"><hr /></td></tr>-->
+        <#--<#if orderType != "PURCHASE_ORDER" && (productStore.showCheckoutGiftOptions)! != "N">-->
         <#-- gift settings -->
-            <tr>
+            <#--<tr>
                 <td align="right" valign="top" width="15%">
                     <div>&nbsp;<b>${uiLabelMap.OrderGift}</b></div>
                 </td>
@@ -161,7 +161,7 @@ under the License.
             </tr>
             <tr><td colspan="7"><hr /></td></tr>
             </#if>
-        </#if>
+        </#if>-->
         <#if shipAfterDate?has_content>
             <tr>
                 <td align="right" valign="top" width="15%">

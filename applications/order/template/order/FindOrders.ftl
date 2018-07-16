@@ -153,21 +153,21 @@ function toggleOrderIdList() {
                 <td width='5%'>&nbsp;</td>
                 <td align='left'><input type='text' name='orderName'/></td>
               </tr>
-             <tr>
+             <#--<tr>
                 <td width='25%' align='right' class='label'>${uiLabelMap.OrderExternalId}</td>
                 <td width='5%'>&nbsp;</td>
                 <td align='left'><input type='text' name='externalId'/></td>
-              </tr>
+              </tr>-->
               <tr>
                 <td width='25%' align='right' class='label'>${uiLabelMap.OrderCustomerPo}</td>
                 <td width='5%'>&nbsp;</td>
                 <td align='left'><input type='text' name='correspondingPoId' value='${requestParameters.correspondingPoId!}'/></td>
               </tr>
-              <tr>
+              <#--<tr>
                 <td width='25%' align='right' class='label'>${uiLabelMap.OrderInternalCode}</td>
                 <td width='5%'>&nbsp;</td>
                 <td align='left'><input type='text' name='internalCode' value='${requestParameters.internalCode!}'/></td>
-              </tr>
+              </tr>-->
               <tr>
                 <td width='25%' align='right' class='label'>${uiLabelMap.ProductProductId}</td>
                 <td width='5%'>&nbsp;</td>
@@ -175,7 +175,7 @@ function toggleOrderIdList() {
                   <@htmlTemplate.lookupField value='${requestParameters.productId!}' formName="lookuporder" name="productId" id="productId" fieldFormName="LookupProduct"/>
                 </td>
               </tr>
-              <#if goodIdentificationTypes?has_content>
+              <#--<#if goodIdentificationTypes?has_content>
               <tr>
                   <td width='25%' align='right' class='label'>${uiLabelMap.ProductGoodIdentificationType}</td>
                   <td width='5%'>&nbsp;</td>
@@ -241,7 +241,7 @@ function toggleOrderIdList() {
                 <td align='left'>
                   <@htmlTemplate.lookupField value='${requestParameters.userLoginId!}' formName="lookuporder" name="userLoginId" id="userLoginId" fieldFormName="LookupUserLoginAndPartyDetails"/>
                 </td>
-              </tr>
+              </tr>-->
               <tr>
                 <td width='25%' align='right' class='label'>${uiLabelMap.OrderOrderType}</td>
                 <td width='5%'>&nbsp;</td>
@@ -258,7 +258,7 @@ function toggleOrderIdList() {
                   </select>
                 </td>
               </tr>
-              <tr>
+              <#--<tr>
                 <td width='25%' align='right' class='label'>${uiLabelMap.AccountingBillingAccount}</td>
                 <td width='5%'>&nbsp;</td>
                 <td align='left'>
@@ -317,7 +317,7 @@ function toggleOrderIdList() {
                     </#list>
                   </select>
                 </td>
-              </tr>
+              </tr>-->
               <tr>
                 <td width='25%' align='right' class='label'>${uiLabelMap.CommonStatus}</td>
                 <td width='5%'>&nbsp;</td>
@@ -330,7 +330,7 @@ function toggleOrderIdList() {
                   </#list>
                 </td>
               </tr>
-              <tr>
+              <#--<tr>
                 <td width='25%' align='right' class='label'>${uiLabelMap.OrderContainsBackOrders}</td>
                 <td width='5%'>&nbsp;</td>
                 <td align='left'>
@@ -343,7 +343,7 @@ function toggleOrderIdList() {
                     <option value="Y">${uiLabelMap.CommonOnly}</option>
                   </select>
                 </td>
-              </tr>
+              </tr>-->
               <tr>
                 <td width='25%' align='right' class='label'>${uiLabelMap.OrderSelectShippingMethod}</td>
                 <td width='5%'>&nbsp;</td>
@@ -377,7 +377,7 @@ function toggleOrderIdList() {
                   </select>
                 </td>
               </tr>
-              <tr>
+              <#--<tr>
                 <td width='25%' align='right' class='label'>${uiLabelMap.OrderAddressVerification}</td>
                 <td width='5%'>&nbsp;</td>
                 <td align='left'><input type='text' name='gatewayAvsResult' value='${requestParameters.gatewayAvsResult!}'/></td>
@@ -463,7 +463,7 @@ function toggleOrderIdList() {
                   </table>
                 </td>
               </tr>
-              <tr>
+              <tr>-->
                 <td width='25%' align='right' class='label'>${uiLabelMap.OrderShipToCountry}</td>
                 <td width='5%'>&nbsp;</td>
                 <td align='left'>
@@ -594,22 +594,22 @@ document.lookuporder.orderId.focus();
           <td width="1%">
             <input type="checkbox" id="checkAllOrders" name="checkAllOrders" value="1" onchange="javascript:toggleOrderId(this);"/>
           </td>
-          <td width="5%">${uiLabelMap.OrderOrderType}</td>
-          <td width="5%">${uiLabelMap.OrderOrderId}</td>
-          <td width="15%">${uiLabelMap.OrderOrderName}</td>
+          <td width="15%">${uiLabelMap.OrderOrderType}</td>
+          <td width="10%">${uiLabelMap.OrderOrderId}</td>
+          <td width="10%">${uiLabelMap.OrderOrderName}</td>
           <td width="20%">${uiLabelMap.PartyName}</td>
-          <td width="5%" align="right">${uiLabelMap.OrderSurvey}</td>
+          <#--<td width="5%" align="right">${uiLabelMap.OrderSurvey}</td>-->
           <td width="5%" align="right">${uiLabelMap.OrderItemsOrdered}</td>
-          <td width="5%" align="right">${uiLabelMap.OrderItemsBackOrdered}</td>
-          <td width="5%" align="right">${uiLabelMap.OrderItemsReturned}</td>
-          <td width="10%" align="right">${uiLabelMap.OrderRemainingSubTotal}</td>
-          <td width="10%" align="right">${uiLabelMap.OrderOrderTotal}</td>
+          <#--<td width="5%" align="right">${uiLabelMap.OrderItemsBackOrdered}</td>
+          <td width="5%" align="right">${uiLabelMap.OrderItemsReturned}</td>-->
+          <#--<td width="10%" align="right">${uiLabelMap.OrderRemainingSubTotal}</td>
+          <td width="10%" align="right">${uiLabelMap.OrderOrderTotal}</td>-->
           <td width="5%">&nbsp;</td>
             <#if (requestParameters.filterInventoryProblems?default("N") == "Y") || (requestParameters.filterPOsOpenPastTheirETA?default("N") == "Y") || (requestParameters.filterPOsWithRejectedItems?default("N") == "Y") || (requestParameters.filterPartiallyReceivedPOs?default("N") == "Y")>
               <td width="10%">${uiLabelMap.CommonStatus}</td>
               <td width="5%">${uiLabelMap.CommonFilter}</td>
             <#else>
-              <td width="15%">${uiLabelMap.CommonStatus}</td>
+              <td width="5%">${uiLabelMap.CommonStatus}</td>
             </#if>
           <td width="20%">${uiLabelMap.OrderDate}</td>
           <td width="5%">${uiLabelMap.PartyPartyId}</td>
@@ -648,17 +648,17 @@ document.lookuporder.orderId.focus();
                   </#if>
                 </div>
               </td>
-              <td align="right">${orh.hasSurvey()?string.number}</td>
+              <#--<td align="right">${orh.hasSurvey()?string.number}</td>-->
               <td align="right">${orh.getTotalOrderItemsQuantity()?string.number}</td>
-              <td align="right">${orh.getOrderBackorderQuantity()?string.number}</td>
+              <#--<td align="right">${orh.getOrderBackorderQuantity()?string.number}</td>
               <td align="right">${orh.getOrderReturnedQuantity()?string.number}</td>
               <td align="right"><@ofbizCurrency amount=orderHeader.remainingSubTotal isoCode=orh.getCurrency()/></td>
-              <td align="right"><@ofbizCurrency amount=orderHeader.grandTotal isoCode=orh.getCurrency()/></td>
+              <td align="right"><@ofbizCurrency amount=orderHeader.grandTotal isoCode=orh.getCurrency()/></td>-->
 
               <td>&nbsp;</td>
               <td>${statusItem.get("description",locale)?default(statusItem.statusId?default("N/A"))}</td>
               </td>
-              <#if (requestParameters.filterInventoryProblems?default("N") == "Y") || (requestParameters.filterPOsOpenPastTheirETA?default("N") == "Y") || (requestParameters.filterPOsWithRejectedItems?default("N") == "Y") || (requestParameters.filterPartiallyReceivedPOs?default("N") == "Y")>
+              <#--<#if (requestParameters.filterInventoryProblems?default("N") == "Y") || (requestParameters.filterPOsOpenPastTheirETA?default("N") == "Y") || (requestParameters.filterPOsWithRejectedItems?default("N") == "Y") || (requestParameters.filterPartiallyReceivedPOs?default("N") == "Y")>
                   <td>
                       <#if filterInventoryProblems.contains(orderHeader.orderId)>
                         Inv&nbsp;
@@ -673,7 +673,7 @@ document.lookuporder.orderId.focus();
                         Part&nbsp;
                       </#if>
                   </td>
-              </#if>
+              </#if>-->
               <td>${orderHeader.getString("orderDate")}</td>
               <td>
                 <#if partyId != "_NA_">

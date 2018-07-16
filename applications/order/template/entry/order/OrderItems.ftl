@@ -18,7 +18,7 @@ under the License.
 -->
 
 <div class="screenlet">
-    <div class="screenlet-title-bar">
+    <#--<div class="screenlet-title-bar">
         <div class="boxlink">
             <#if maySelectItems?default(false)>
                 <a href="javascript:document.addOrderToCartForm.add_all.value="true";document.addOrderToCartForm.submit()" class="lightbuttontext">${uiLabelMap.OrderAddAllToCart}</a>
@@ -73,21 +73,21 @@ under the License.
                   </td>
                 </#if>
               </#if>
-            </tr>
+            </tr>-->
             <#-- show info from workeffort if it was a rental item -->
-            <#if orderItem.orderItemTypeId?? && orderItem.orderItemTypeId == "RENTAL_ORDER_ITEM">
+            <#--<#if orderItem.orderItemTypeId?? && orderItem.orderItemTypeId == "RENTAL_ORDER_ITEM">
                 <#assign WorkOrderItemFulfillments = orderItem.getRelated("WorkOrderItemFulfillment", null, null, false)!>
                 <#if WorkOrderItemFulfillments?has_content>
                     <#list WorkOrderItemFulfillments as WorkOrderItemFulfillment>
                         <#assign workEffort = WorkOrderItemFulfillment.getRelatedOne("WorkEffort", true)!>
                           <tr><td>&nbsp;</td><td>&nbsp;</td><td colspan="8"><div>${uiLabelMap.CommonFrom}: ${workEffort.estimatedStartDate?string("yyyy-MM-dd")} ${uiLabelMap.CommonTo}: ${workEffort.estimatedCompletionDate?string("yyyy-MM-dd")} ${uiLabelMap.OrderNbrPersons}: ${workEffort.reservPersons}</div></td></tr>
-                        <#break><#-- need only the first one -->
+                        <#break>
                     </#list>
                 </#if>
-            </#if>
+            </#if>-->
 
             <#-- now show adjustment details per line item -->
-            <#assign itemAdjustments = localOrderReadHelper.getOrderItemAdjustments(orderItem)>
+            <#--<#assign itemAdjustments = localOrderReadHelper.getOrderItemAdjustments(orderItem)>
             <#list itemAdjustments as orderItemAdjustment>
               <tr>
                 <td align="right">
@@ -155,5 +155,5 @@ under the License.
             </td>
           </tr>
         </table>
-    </div>
+    </div>-->
 </div>

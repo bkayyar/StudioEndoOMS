@@ -152,7 +152,7 @@ under the License.
                 <parameter param-name="productionRunId"/>
             </link>
         </menu-item>
-        <menu-item name="actualComponents" title="${uiLabelMap.ManufacturingActualMaterials}">
+        <!--<menu-item name="actualComponents" title="${uiLabelMap.ManufacturingActualMaterials}">
             <condition>
                 <not>
                     <or>
@@ -184,7 +184,7 @@ under the License.
             <link target="ProductionRunCosts">
                 <parameter param-name="productionRunId"/>
             </link>
-        </menu-item>
+        </menu-item>-->
     </menu>
     
     <menu name="ProductionRunStatusTabBar" extends="CommonTabBarMenu" extends-resource="component://common/widget/CommonMenus.xml">

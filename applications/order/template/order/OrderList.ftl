@@ -110,7 +110,7 @@ under the License.
                 </div>
             </td>
           </tr>
-          <tr>
+          <#--<tr>
             <td align="right" class="label">${uiLabelMap.CommonFilter}</td>
             <td>&nbsp;&nbsp;</td>
             <td nowrap="nowrap">
@@ -143,7 +143,7 @@ under the License.
                         ${uiLabelMap.OrderFilterPOsWithRejectedItems}</label>
                 </div>
             </td>
-          </tr>
+          </tr>-->
           <tr>
             <td colspan="3" align="center">
               <br />
@@ -175,9 +175,9 @@ under the License.
             <td width="10%">${uiLabelMap.OrderOrderType}</td>
             <td width="10%">${uiLabelMap.OrderOrderBillFromParty}</td>
             <td width="10%">${uiLabelMap.OrderOrderBillToParty}</td>
-            <td width="10%">${uiLabelMap.OrderProductStore}</td>
+            <#--<td width="10%">${uiLabelMap.OrderProductStore}</td>
             <td width="10%">${uiLabelMap.CommonAmount}</td>
-            <td width="10%">${uiLabelMap.OrderTrackingCode}</td>
+            <td width="10%">${uiLabelMap.OrderTrackingCode}</td>-->
             <#if state.hasFilter('filterInventoryProblems') || state.hasFilter('filterAuthProblems') || state.hasFilter('filterPOsOpenPastTheirETA') || state.hasFilter('filterPOsWithRejectedItems') || state.hasFilter('filterPartiallyReceivedPOs')>
                 <td width="10%">${uiLabelMap.CommonStatus}</td>
                 <td width="5%">${uiLabelMap.CommonFilter}</td>
@@ -211,7 +211,7 @@ under the License.
               <td>${orderHeader.getRelatedOne("OrderType", true).get("description",locale)}</td>
               <td>${billFrom!}</td>
               <td>${billTo!}</td>
-              <td><#if productStore?has_content>${productStore.storeName?default(productStore.productStoreId)}</#if></td>
+              <#--<td><#if productStore?has_content>${productStore.storeName?default(productStore.productStoreId)}</#if></td>
               <td><@ofbizCurrency amount=orderHeader.grandTotal isoCode=orderHeader.currencyUom/></td>
               <td>
                 <#assign trackingCodes = orderHeader.getRelated("TrackingCodeOrder", null, null, false)>
@@ -220,7 +220,7 @@ under the License.
                         <a href="/marketing/control/FindTrackingCodeOrders?trackingCodeId=${trackingCode.trackingCodeId}&amp;externalLoginKey=${requestAttributes.externalLoginKey!}">${trackingCode.trackingCodeId}</a><br />
                     </#if>
                 </#list>
-              </td>
+              </td>-->
               <td>${orderHeader.getRelatedOne("StatusItem", true).get("description",locale)}</td>
               <#if state.hasFilter('filterInventoryProblems') || state.hasFilter('filterAuthProblems') || state.hasFilter('filterPOsOpenPastTheirETA') || state.hasFilter('filterPOsWithRejectedItems') || state.hasFilter('filterPartiallyReceivedPOs')>
               <td>

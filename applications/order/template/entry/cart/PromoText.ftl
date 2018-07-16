@@ -18,12 +18,11 @@ under the License.
 -->
 <#if showPromoText?? && showPromoText>
 <div class="screenlet">
-    <div class="screenlet-title-bar">
+    <#--<div class="screenlet-title-bar">
         <div class="h3">${uiLabelMap.OrderSpecialOffers}</div>
     </div>
     <div class="screenlet-body">
         <table cellspacing="0" cellpadding="1" border="0">
-          <#-- show promotions text -->
           <#list productPromos as productPromo>
             <tr>
               <td>
@@ -41,6 +40,6 @@ under the License.
             </td>
           </tr>
         </table>
-    </div>
+    </div>-->
 </div>
 </#if>

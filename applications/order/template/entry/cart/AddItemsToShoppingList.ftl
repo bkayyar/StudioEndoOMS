@@ -21,7 +21,7 @@ under the License.
 
 <#if (shoppingLists??) && (shoppingCartSize > 0)>
   <div class="screenlet">
-    <div class="screenlet-title-bar">
+    <#--<div class="screenlet-title-bar">
         <div class="h3">${uiLabelMap.OrderAddOrderToShoppingList}</div>
     </div>
     <div class="screenlet-body">
@@ -56,6 +56,6 @@ under the License.
           </td>
         </tr>
       </table>
-    </div>
+    </div>-->
   </div>
 </#if>
