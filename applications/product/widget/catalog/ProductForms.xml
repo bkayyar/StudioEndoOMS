@@ -419,34 +419,34 @@ under the License.
         <auto-fields-service service-name="createProductPrice"/>
         <field name="fromDate" required-field="false" default-value="${nowTimestamp}"><hidden/></field>
         <field name="productId"><hidden/></field>
-        <field name="productPriceTypeId" title="${uiLabelMap.ProductPriceType}"> 
-            <drop-down allow-empty="false" no-current-selected-key="DEFAULT_PRICE"> 
+        <field name="productPriceTypeId" title="${uiLabelMap.ProductPriceType}"><hidden value="DEFAULT_PRICE"/>
+            <!--<drop-down allow-empty="false" no-current-selected-key="DEFAULT_PRICE"> 
                 <entity-options entity-name="ProductPriceType">
                     <entity-order-by field-name="description"/>
                 </entity-options>
-            </drop-down>
+            </drop-down>-->
         </field>
-        <field name="productPricePurposeId" title="${uiLabelMap.CommonPurpose}" style="display:none" default-value="PURCHASE">
-            <drop-down allow-empty="false" no-current-selected-key="PURCHASE">
+        <field name="productPricePurposeId" title="${uiLabelMap.CommonPurpose}" style="display:none" default-value="PURCHASE"><hidden value="PURCHASE"/>
+            <!--<drop-down allow-empty="false" no-current-selected-key="PURCHASE">
                 <entity-options entity-name="ProductPricePurpose">
                     <entity-order-by field-name="description"/>
                 </entity-options>
-            </drop-down>
+            </drop-down>-->
         </field>
-        <field name="currencyUomId" title="${uiLabelMap.ProductCurrencyUomId}" value="${defaultOrganizationPartyCurrencyUomId}">
-            <drop-down allow-empty="false" no-current-selected-key="${defaultOrganizationPartyCurrencyUomId}">
+        <field name="currencyUomId" title="${uiLabelMap.ProductCurrencyUomId}" value="${defaultOrganizationPartyCurrencyUomId}"><hidden value="${defaultOrganizationPartyCurrencyUomId}"/>
+            <!--<drop-down allow-empty="false" no-current-selected-key="${defaultOrganizationPartyCurrencyUomId}">
                 <entity-options key-field-name="uomId" description="${description} - ${abbreviation}" entity-name="Uom">
                     <entity-constraint name="uomTypeId" operator="equals" value="CURRENCY_MEASURE"/>
                     <entity-order-by field-name="description"/>
                 </entity-options>
-            </drop-down>
+            </drop-down>-->
         </field>
-        <field name="productStoreGroupId" title="${uiLabelMap.ProductProductStoreGroupId}" value="_NA_">
-            <drop-down allow-empty="true" no-current-selected-key="_NA_">
+        <field name="productStoreGroupId" title="${uiLabelMap.ProductProductStoreGroupId}"><hidden value="_NA_"/>
+            <!--<drop-down allow-empty="true" no-current-selected-key="_NA_">
                 <entity-options entity-name="ProductStoreGroup" description="${productStoreGroupName}">
                     <entity-order-by field-name="productStoreGroupName"/>
                 </entity-options>
-            </drop-down>
+            </drop-down>-->
         </field>
         <field name="termUomId"><hidden/>
             <!--<drop-down allow-empty="true">
@@ -895,28 +895,28 @@ under the License.
                 </entity-options>
             </drop-down>
         </field>
-        <field name="availableFromDate" use-when="supplierProduct==null">
-            <date-time default-value="${groovy: org.apache.ofbiz.base.util.UtilDateTime.nowTimestamp()}"/>
+        <field name="availableFromDate" use-when="supplierProduct==null"><hidden value="${groovy: org.apache.ofbiz.base.util.UtilDateTime.nowTimestamp()}"/>
+            <!--<date-time default-value="${groovy: org.apache.ofbiz.base.util.UtilDateTime.nowTimestamp()}"/>-->
         </field>
         <field name="availableFromDate" use-when="supplierProduct!=null">
             <display/>
         </field>
-        <field name="minimumOrderQuantity" use-when="supplierProduct==null">
-            <text default-value="0" size="5"/>
+        <field name="minimumOrderQuantity" use-when="supplierProduct==null"><hidden value="0"/>
+            <!--<text default-value="0" size="5"/>-->
         </field>
-        <field name="minimumOrderQuantity" use-when="supplierProduct!=null">
-            <display/>
+        <field name="minimumOrderQuantity" use-when="supplierProduct!=null"><hidden value="0"/>
+            <!--<display/>-->
         </field>
-        <field name="currencyUomId" title="${uiLabelMap.ProductCurrencyUomId}" use-when="supplierProduct==null">
-            <drop-down allow-empty="false" no-current-selected-key="${defaultOrganizationPartyCurrencyUomId}">
+        <field name="currencyUomId" title="${uiLabelMap.ProductCurrencyUomId}" use-when="supplierProduct==null"><hidden value="${defaultOrganizationPartyCurrencyUomId}"/>
+            <!--<drop-down allow-empty="false" no-current-selected-key="${defaultOrganizationPartyCurrencyUomId}">
                 <entity-options key-field-name="uomId" description="${description} - ${abbreviation}" entity-name="Uom">
                     <entity-constraint name="uomTypeId" operator="equals" value="CURRENCY_MEASURE"/>
                     <entity-order-by field-name="description"/>
                 </entity-options>
-            </drop-down>
+            </drop-down>-->
         </field>
-        <field name="currencyUomId" title="${uiLabelMap.ProductCurrencyUomId}" use-when="supplierProduct!=null">
-            <display-entity entity-name="Uom" key-field-name="uomId"/>
+        <field name="currencyUomId" title="${uiLabelMap.ProductCurrencyUomId}" use-when="supplierProduct!=null"><hidden value="${defaultOrganizationPartyCurrencyUomId}"/>
+            <!--<display-entity entity-name="Uom" key-field-name="uomId"/>-->
         </field>
         <field name="supplierPrefOrderId"><hidden/>
             <!--<drop-down allow-empty="true" no-current-selected-key="10_MAIN_SUPPL">
@@ -942,13 +942,13 @@ under the License.
             </drop-down>-->
         </field>
         <field name="supplierProductId" title="${uiLabelMap.FormFieldTitle_supplierProductId}" required-field="true"></field>
-        <field name="canDropShip" title="${uiLabelMap.ProductSupplierCanDropShip}">
-            <drop-down allow-empty="false" no-current-selected-key="N">
+        <field name="canDropShip" title="${uiLabelMap.ProductSupplierCanDropShip}"><hidden value="N"/>
+            <!--<drop-down allow-empty="false" no-current-selected-key="N">
                 <option key="Y" description="${uiLabelMap.CommonY}"/>
                 <option key="N" description="${uiLabelMap.CommonN}"/>
-            </drop-down>
+            </drop-down>-->
         </field>
-        <field name="lastPrice" title="${uiLabelMap.FormFieldTitle_lastPrice}" required-field="true"></field>
+        <field name="lastPrice" title="${uiLabelMap.FormFieldTitle_lastPrice}" required-field="false"><hidden value="20"/></field>
         <field use-when="supplierProduct == null" name="submitButton" title="${uiLabelMap.CommonCreate}"><submit button-type="button"/></field>
         <field use-when="supplierProduct != null" name="submitButton" title="${uiLabelMap.CommonUpdate}"><submit button-type="button"/></field>
     </form>
@@ -975,8 +975,8 @@ under the License.
         <field name="availableThruDate" title="${uiLabelMap.ProductAvailableThruDate}" red-when="before-now" sort-field="true"><display/></field>-->
         <field name="quantityUomId"><display-entity entity-name="Uom" key-field-name="uomId"/></field>
         <!-- field name="supplierCommissionPerc"><display/></field--><!-- Unused field, better use commission run using agreements in accounting -->
-        <field name="lastPrice" sort-field="true">
-            <display type="currency" currency="${currencyUomId}"/>
+        <field name="lastPrice" sort-field="true"><hidden/>
+            <!--<display type="currency" currency="${currencyUomId}"/>-->
         </field>
         <field name="shippingPrice"><hidden/>
             <!--<display type="currency" currency="${currencyUomId}"/>-->

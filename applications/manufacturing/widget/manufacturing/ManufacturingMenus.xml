@@ -358,7 +358,7 @@ under the License.
                 <parameter param-name="workEffortId" from-field="routingTask.workEffortId"/>
             </link>
         </menu-item>
-        <menu-item name="editRoutingTaskCosts" title="${uiLabelMap.ManufacturingRoutingTaskCosts}">
+        <!--<menu-item name="editRoutingTaskCosts" title="${uiLabelMap.ManufacturingRoutingTaskCosts}">
             <link target="EditRoutingTaskCosts">
                 <parameter param-name="workEffortId" from-field="routingTask.workEffortId"/>
             </link>
@@ -377,7 +377,7 @@ under the License.
             <link target="EditRoutingTaskParties">
                 <parameter param-name="workEffortId" from-field="routingTask.workEffortId"/>
             </link>
-        </menu-item>
+        </menu-item>-->
     </menu>
 
 </menus>
