@@ -20,38 +20,63 @@ under the License.
 
 <simple-methods xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xmlns="http://ofbiz.apache.org/Simple-Method" xsi:schemaLocation="http://ofbiz.apache.org/Simple-Method http://ofbiz.apache.org/dtds/simple-methods.xsd">
+    <simple-method method-name="HX22Wire" short-description="Formula for HX22 wire length">
+        <set field="arguments" from-field="parameters.arguments"/>
+        <field-to-result field="quantity" result-name="quantity"/>
+    </simple-method>
+
+    <simple-method method-name="HX28Wire" short-description="Formula for HX28 wire length">
+        <set field="arguments" from-field="parameters.arguments"/>
+        <field-to-result field="quantity" result-name="quantity"/>
+    </simple-method>
+
+    <simple-method method-name="HX34Wire" short-description="Formula for HX34 wire length">
+        <set field="arguments" from-field="parameters.arguments"/>
+        <field-to-result field="quantity" result-name="quantity"/>
+    </simple-method>
+
+    <simple-method method-name="HX46Wire" short-description="Formula for HX46 wire length">
+        <set field="arguments" from-field="parameters.arguments"/>
+        <field-to-result field="quantity" result-name="quantity"/>
+    </simple-method>
 
     <simple-method method-name="VX22Wire" short-description="Formula for VX22 wire length">
         <set field="arguments" from-field="parameters.arguments"/>
-        <calculate field="singleWire">
-            <calcop operator="subtract">
-                <calcop operator="get" field="arguments.amount"/>
-                <number value="23.75">
-            </calcop>
-        </calculate>
-        <calculate field="totQuantity">
-            <calcop operator="multiply">
-                <calcop operator="get" field="arguments.neededQuantity"/>
-                <calcop operator="get" field="singleWire"/>
-            </calcop>
-        </calculate>
+        <field-to-result field="quantity" result-name="quantity"/>
+    </simple-method>
+
+    <simple-method method-name="DX34Wire" short-description="Formula for DX34 wire length">
+        <set field="arguments" from-field="parameters.arguments"/>
+        <field-to-result field="quantity" result-name="quantity"/>
+    </simple-method>
+
+    <simple-method method-name="DX43Wire" short-description="Formula for DX43 wire length">
+        <set field="arguments" from-field="parameters.arguments"/>
+        <field-to-result field="quantity" result-name="quantity"/>
+    </simple-method>
+
+    <simple-method method-name="LX58Wire" short-description="Formula for LX58 wire length">
+        <set field="arguments" from-field="parameters.arguments"/>
+        <field-to-result field="quantity" result-name="quantity"/>
+    </simple-method>
+
+    <simple-method method-name="VX22Wire" short-description="Formula for VX22 wire length">
+        <set field="arguments" from-field="parameters.arguments"/>
         <field-to-result field="quantity" result-name="quantity"/>
     </simple-method>
 
     <simple-method method-name="VX34Wire" short-description="Formula for VX34 wire length">
         <set field="arguments" from-field="parameters.arguments"/>
-        <calculate field="singleWire">
-            <calcop operator="subtract">
-                <calcop operator="get" field="arguments.amount"/>
-                <number value="35.75">
-            </calcop>
-        </calculate>
-        <calculate field="totQuantity">
-            <calcop operator="multiply">
-                <calcop operator="get" field="arguments.neededQuantity"/>
-                <calcop operator="get" field="singleWire"/>
-            </calcop>
-        </calculate>
+        <field-to-result field="quantity" result-name="quantity"/>
+    </simple-method>
+
+    <simple-method method-name="VX46Wire" short-description="Formula for VX46 wire length">
+        <set field="arguments" from-field="parameters.arguments"/>
+        <field-to-result field="quantity" result-name="quantity"/>
+    </simple-method>
+
+    <simple-method method-name="VX58Wire" short-description="Formula for VX58 wire length">
+        <set field="arguments" from-field="parameters.arguments"/>
         <field-to-result field="quantity" result-name="quantity"/>
     </simple-method>
 </simple-methods>

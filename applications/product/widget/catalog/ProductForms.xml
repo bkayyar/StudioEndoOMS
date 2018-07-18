@@ -77,7 +77,7 @@ under the License.
                 </entity-options>
             </drop-down>
         </field>
-        <!--<field position="1" name="isVirtual" title="${uiLabelMap.ProductVirtualProduct}">
+        <field position="1" name="isVirtual" title="${uiLabelMap.ProductVirtualProduct}">
             <drop-down><option key="N" description="${uiLabelMap.CommonN}"/><option key="Y" description="${uiLabelMap.CommonY}"/></drop-down>
         </field>
         <field position="2" name="isVariant" title="${uiLabelMap.ProductVariantProduct}">
@@ -90,7 +90,7 @@ under the License.
                     <entity-order-by field-name="sequenceId"/>
                 </entity-options>
             </drop-down>
-        </field>-->
+        </field>
         <!--<field position="1" name="primaryProductCategoryId" title="${uiLabelMap.ProductPrimaryCategory}">
             <drop-down allow-empty="true">
                 <entity-options entity-name="ProductCategoryAndMember" key-field-name="productCategoryId" description="${categoryName} [${productCategoryId}]">
@@ -417,7 +417,7 @@ under the License.
     <form name="AddProductPrice" type="single" target="createProductPrice" title=""
         header-row-style="header-row" default-table-style="basic-table">
         <auto-fields-service service-name="createProductPrice"/>
-        <field name="fromDate" required-field="true" value="${nowTimestamp}"><hidden/></field>
+        <field name="fromDate" required-field="false" default-value="${nowTimestamp}"><hidden/></field>
         <field name="productId"><hidden/></field>
         <field name="productPriceTypeId" title="${uiLabelMap.ProductPriceType}"> 
             <drop-down allow-empty="false" no-current-selected-key="DEFAULT_PRICE"> 
@@ -442,7 +442,7 @@ under the License.
             </drop-down>
         </field>
         <field name="productStoreGroupId" title="${uiLabelMap.ProductProductStoreGroupId}" value="_NA_">
-            <drop-down allow-empty="false" no-current-selected-key="_NA_">
+            <drop-down allow-empty="true" no-current-selected-key="_NA_">
                 <entity-options entity-name="ProductStoreGroup" description="${productStoreGroupName}">
                     <entity-order-by field-name="productStoreGroupName"/>
                 </entity-options>
@@ -918,28 +918,28 @@ under the License.
         <field name="currencyUomId" title="${uiLabelMap.ProductCurrencyUomId}" use-when="supplierProduct!=null">
             <display-entity entity-name="Uom" key-field-name="uomId"/>
         </field>
-        <field name="supplierPrefOrderId">
-            <drop-down allow-empty="true" no-current-selected-key="10_MAIN_SUPPL">
+        <field name="supplierPrefOrderId"><hidden/>
+            <!--<drop-down allow-empty="true" no-current-selected-key="10_MAIN_SUPPL">
                 <entity-options entity-name="SupplierPrefOrder" key-field-name="supplierPrefOrderId">
                     <entity-order-by field-name="supplierPrefOrderId"/>
                 </entity-options>
-            </drop-down>
+            </drop-down>-->
         </field>
-        <field name="supplierRatingTypeId">
-            <drop-down allow-empty="true">
+        <field name="supplierRatingTypeId"><hidden/>
+            <!--<drop-down allow-empty="true">
                 <entity-options entity-name="SupplierRatingType" key-field-name="supplierRatingTypeId">
                     <entity-order-by field-name="description"/>
                 </entity-options>
-            </drop-down>
+            </drop-down>-->
         </field>
-        <field name="quantityUomId" title="${uiLabelMap.ProductQuantityUomId}">
-            <drop-down allow-empty="true">
+        <field name="quantityUomId" title="${uiLabelMap.ProductQuantityUomId}"><hidden/>
+            <!--<drop-down allow-empty="true">
                 <entity-options entity-name="UomAndType" key-field-name="uomId" description="${typeDescription}: ${description} (${abbreviation})">
                     <entity-constraint name="uomTypeId" operator="not-equals" value="CURRENCY_MEASURE"/>
                     <entity-order-by field-name="typeDescription"/>
                     <entity-order-by field-name="uomId"/>
                 </entity-options>
-            </drop-down>
+            </drop-down>-->
         </field>
         <field name="supplierProductId" title="${uiLabelMap.FormFieldTitle_supplierProductId}" required-field="true"></field>
         <field name="canDropShip" title="${uiLabelMap.ProductSupplierCanDropShip}">
@@ -971,15 +971,15 @@ under the License.
         <field name="supplierPrefOrderId">
             <display-entity entity-name="SupplierPrefOrder"/>
         </field>
-        <field name="availableFromDate" title="${uiLabelMap.ProductAvailableFromDate}" red-when="after-now" sort-field="true"><display/></field>
-        <field name="availableThruDate" title="${uiLabelMap.ProductAvailableThruDate}" red-when="before-now" sort-field="true"><display/></field>
+        <!--<field name="availableFromDate" title="${uiLabelMap.ProductAvailableFromDate}" red-when="after-now" sort-field="true"><display/></field>
+        <field name="availableThruDate" title="${uiLabelMap.ProductAvailableThruDate}" red-when="before-now" sort-field="true"><display/></field>-->
         <field name="quantityUomId"><display-entity entity-name="Uom" key-field-name="uomId"/></field>
         <!-- field name="supplierCommissionPerc"><display/></field--><!-- Unused field, better use commission run using agreements in accounting -->
         <field name="lastPrice" sort-field="true">
             <display type="currency" currency="${currencyUomId}"/>
         </field>
-        <field name="shippingPrice">
-            <display type="currency" currency="${currencyUomId}"/>
+        <field name="shippingPrice"><hidden/>
+            <!--<display type="currency" currency="${currencyUomId}"/>-->
         </field>
         <field name="editLink" title=" " widget-style="buttontext">
             <hyperlink description="${uiLabelMap.CommonEdit}" target="EditProductSuppliers" also-hidden="false">
@@ -1040,7 +1040,7 @@ under the License.
                 <option key="QUESTION" description="${uiLabelMap.ProductQuestion}"/>
             </drop-down>
         </field>
-        <field name="fromDate" title="${uiLabelMap.CommonFromDateTime}"><display/></field>
+        <field name="fromDate" title="${uiLabelMap.CommonFromDateTime}"><hidden/></field>
 
         <field name="submitButton" title="${uiLabelMap.CommonUpdate}" widget-style="smallSubmit"><submit button-type="button"/></field>
         <field name="deleteLink" title=" " widget-style="buttontext">

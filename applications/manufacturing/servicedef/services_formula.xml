@@ -29,9 +29,59 @@ under the License.
         <attribute mode="IN" name="arguments" optional="false" type="java.util.Map"/>
         <attribute mode="OUT" name="quantity" optional="false" type="BigDecimal"/>
     </service>
+    <service name="HX22Wire" engine="simple" auth="true"
+            location="component://manufacturing/minilang/bom/BomFormulas.xml" invoke="HX22Wire">
+        <description>Formula to calculate HX22 Wire Length</description>
+        <implements service="interfaceBomFormula"/>
+    </service>
+    <service name="HX28Wire" engine="simple" auth="true"
+            location="component://manufacturing/minilang/bom/BomFormulas.xml" invoke="HX28Wire">
+        <description>Formula to calculate HX28 Wire Length</description>
+        <implements service="interfaceBomFormula"/>
+    </service>
+    <service name="HX34Wire" engine="simple" auth="true"
+            location="component://manufacturing/minilang/bom/BomFormulas.xml" invoke="HX34Wire">
+        <description>Formula to calculate HX34 Wire Length</description>
+        <implements service="interfaceBomFormula"/>
+    </service>
+    <service name="HX46Wire" engine="simple" auth="true"
+            location="component://manufacturing/minilang/bom/BomFormulas.xml" invoke="HX46Wire">
+        <description>Formula to calculate HX46 Wire Length</description>
+        <implements service="interfaceBomFormula"/>
+    </service>
+    <service name="DX34Wire" engine="simple" auth="true"
+            location="component://manufacturing/minilang/bom/BomFormulas.xml" invoke="DX34Wire">
+        <description>Formula to calculate DX34 Wire Length</description>
+        <implements service="interfaceBomFormula"/>
+    </service>
+    <service name="DX43Wire" engine="simple" auth="true"
+            location="component://manufacturing/minilang/bom/BomFormulas.xml" invoke="DX43Wire">
+        <description>Formula to calculate DX43 Wire Length</description>
+        <implements service="interfaceBomFormula"/>
+    </service>
+    <service name="LX58Wire" engine="simple" auth="true"
+            location="component://manufacturing/minilang/bom/BomFormulas.xml" invoke="LX58Wire">
+        <description>Formula to calculate LX58 Wire Length</description>
+        <implements service="interfaceBomFormula"/>
+    </service>
     <service name="VX22Wire" engine="simple" auth="true"
             location="component://manufacturing/minilang/bom/BomFormulas.xml" invoke="VX22Wire">
         <description>Formula to calculate VX22 Wire Length</description>
+        <implements service="interfaceBomFormula"/>
+    </service>
+    <service name="VX34Wire" engine="simple" auth="true"
+            location="component://manufacturing/minilang/bom/BomFormulas.xml" invoke="VX34Wire">
+        <description>Formula to calculate VX34 Wire Length</description>
+        <implements service="interfaceBomFormula"/>
+    </service>
+    <service name="VX46Wire" engine="simple" auth="true"
+            location="component://manufacturing/minilang/bom/BomFormulas.xml" invoke="VX46Wire">
+        <description>Formula to calculate VX46 Wire Length</description>
+        <implements service="interfaceBomFormula"/>
+    </service>
+    <service name="VX58Wire" engine="simple" auth="true"
+            location="component://manufacturing/minilang/bom/BomFormulas.xml" invoke="VX58Wire">
+        <description>Formula to calculate VX58 Wire Length</description>
         <implements service="interfaceBomFormula"/>
     </service>
     <!-- Task Formulas -->

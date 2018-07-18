@@ -39,7 +39,7 @@
     <property key="CustomMethod.description.6001">
         <value xml:lang="cs">Příklad vzorce pro kusovník (qty * k)</value>
         <value xml:lang="de">Beispiel Formel für Stückliste (qty * k)</value>
-        <value xml:lang="en">Example bom formula (qty * k)</value>
+        <value xml:lang="en">HX22 Wire Length Formula</value>
         <value xml:lang="es">Ejemplo de fórmula (cant * k)</value>
         <value xml:lang="fr">Exemple de formule de nomenclature (qté * k)</value>
         <value xml:lang="it">Esempio formula distinta base (qnt * k)</value>
@@ -56,7 +56,7 @@
     <property key="CustomMethod.description.6002">
         <value xml:lang="cs">Vzorec kusovníku pro lineární komponenty</value>
         <value xml:lang="de">Stücklisten Formel für lineare Komponenten</value>
-        <value xml:lang="en">Bom formula for linear components</value>
+        <value xml:lang="en">HX28 Wire Length Formula</value>
         <value xml:lang="es">Ejemplo de fórmula para componentes lineales</value>
         <value xml:lang="fr">Formule de nomenclature pour composants linéaires</value>
         <value xml:lang="it">Formula distinta base per componenti lineari</value>
@@ -69,6 +69,47 @@
         <value xml:lang="vi">Công thức tính giá cho các thành phần tuyến tính</value>
         <value xml:lang="zh">用于线性组件的材料清单公式</value>
         <value xml:lang="zh-TW">用於線性元件的材料清單公式</value>
+    </property>
+    <property key="CustomMethod.description.6003">
+        <value xml:lang="cs">HX34 Wire Length Formula</value>
+        <value xml:lang="de">HX34 Wire Length Formula</value>
+        <value xml:lang="en">HX34 Wire Length Formula</value>
+        <value xml:lang="es">HX34 Wire Length Formula</value>
+        <value xml:lang="fr">HX34 Wire Length Formula</value>
+        <value xml:lang="it">HX34 Wire Length Formula</value>
+        <value xml:lang="ja">HX34 Wire Length Formula</value>
+        <value xml:lang="pt">HX34 Wire Length Formula</value>
+        <value xml:lang="pt-BR">HX34 Wire Length Formula</value>
+        <value xml:lang="ro">HX34 Wire Length Formula</value>
+        <value xml:lang="ru">HX34 Wire Length Formula</value>
+        <value xml:lang="th">HX34 Wire Length Formula</value>
+        <value xml:lang="vi">HX34 Wire Length Formula</value>
+        <value xml:lang="zh">HX34 Wire Length Formula</value>
+        <value xml:lang="zh-TW">HX34 Wire Length Formula</value>
+    </property>
+    <property key="CustomMethod.description.6004">
+        <value xml:lang="en">HX46 Wire Length Formula</value>
+    </property>
+    <property key="CustomMethod.description.6005">
+        <value xml:lang="en">DX34 Wire Length Formula</value>
+    </property>
+    <property key="CustomMethod.description.6006">
+        <value xml:lang="en">DX43 Wire Length Formula</value>
+    </property>
+    <property key="CustomMethod.description.6007">
+        <value xml:lang="en">LX58 Wire Length Formula</value>
+    </property>
+    <property key="CustomMethod.description.6008">
+        <value xml:lang="en">VX22 Wire Length Formula</value>
+    </property>
+    <property key="CustomMethod.description.6009">
+        <value xml:lang="en">VX34 Wire Length Formula</value>
+    </property>
+    <property key="CustomMethod.description.6010">
+        <value xml:lang="en">VX46 Wire Length Formula</value>
+    </property>
+    <property key="CustomMethod.description.6011">
+        <value xml:lang="en">VX58 Wire Length Formula</value>
     </property>
     <property key="CustomMethod.description.DBL_DECL_DEP_FORMULA">
         <value xml:lang="ar">الإهلاك المزدوج التراجع للأصول الثابنة (صافي القيمة الدفترية - قيمة الخردة) * 2 / الحياة المتبقية بالسنوات</value>

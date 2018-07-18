@@ -37,14 +37,14 @@ under the License.
             <tr class="header-row">
                 <td><b>${uiLabelMap.ProductItemId}</b></td>
                 <td><b>${uiLabelMap.ProductItemType}</b></td>
-                <td><b>${uiLabelMap.CommonStatus}</b></td>
+                <#--<td><b>${uiLabelMap.CommonStatus}</b></td>
                 <td><b>${uiLabelMap.CommonReceived}</b></td>
                 <td><b>${uiLabelMap.CommonExpire}</b></td>
                 <td><b>${uiLabelMap.ProductFacilityContainerId}</b></td>
                 <td><b>${uiLabelMap.ProductLocation}</b></td>
                 <td><b>${uiLabelMap.ProductLotId}</b></td>
                 <td><b>${uiLabelMap.ProductBinNum}</b></td>
-                <td align="right"><b>${uiLabelMap.ProductPerUnitPrice}</b></td>
+                <td align="right"><b>${uiLabelMap.ProductPerUnitPrice}</b></td>-->
                 <td>&nbsp;</td>
                 <td align="right"><b>${uiLabelMap.ProductInventoryItemInitialQuantity}</b></td>
                 <td align="right"><b>${uiLabelMap.ProductAtpQohSerial}</b></td>

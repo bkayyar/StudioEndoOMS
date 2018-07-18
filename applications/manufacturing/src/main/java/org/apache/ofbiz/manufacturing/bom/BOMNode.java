@@ -410,6 +410,7 @@ public class BOMNode {
                 GenericValue genericService = productAssoc.getRelatedOne("CustomMethod", false);
                 if (genericService != null && genericService.getString("customMethodName") != null) {
                     serviceName = genericService.getString("customMethodName");
+                    Debug.logInfo("MethName: " + serviceName, module);
                 }
             } catch (Exception exc) {
             }
@@ -427,8 +428,57 @@ public class BOMNode {
             arguments.put("width", width);
             Map<String, Object> inputContext = UtilMisc.<String, Object>toMap("arguments", arguments, "userLogin", userLogin);
             try {
-                resultContext = dispatcher.runSync(serviceName, inputContext);
-                BigDecimal calcQuantity = (BigDecimal)resultContext.get("quantity");
+                BigDecimal calcQuantity = BigDecimal.ZERO;
+                double intermediate = 0.0;
+                switch(serviceName) {
+                    case "HX22Wire":   
+                        intermediate = Math.pow((quantity.doubleValue()-3.75),2);
+                        calcQuantity = BigDecimal.valueOf(Math.sqrt(60.0f+intermediate));
+                        break;
+                    case "HX28Wire":   
+                        intermediate = Math.pow((quantity.doubleValue()-3.75),2);
+                        calcQuantity = BigDecimal.valueOf(Math.sqrt(105.0f+intermediate));
+                        break;
+                    case "HX34Wire":   
+                        intermediate = Math.pow((quantity.doubleValue()-3.75),2);
+                        calcQuantity = BigDecimal.valueOf(Math.sqrt(162.5f+intermediate));
+                        break;
+                    case "HX46Wire":   
+                        intermediate = Math.pow((quantity.doubleValue()-3.75),2);
+                        calcQuantity = BigDecimal.valueOf(Math.sqrt(324.0f+intermediate));
+                        break;
+                    case "DX34Wire":   
+                        intermediate = Math.pow((quantity.doubleValue()-3.75),2);
+                        calcQuantity = BigDecimal.valueOf(Math.sqrt(244.0f+intermediate));
+                        break;
+                    case "DX43Wire":   
+                        intermediate = Math.pow((quantity.doubleValue()-3.75),2);
+                        calcQuantity = BigDecimal.valueOf(Math.sqrt(400.0f+intermediate));
+                        break;
+                    case "LX58Wire":   
+                        intermediate = Math.pow((quantity.doubleValue()-3.75),2);
+                        calcQuantity = BigDecimal.valueOf(Math.sqrt(60.0f+intermediate));
+                        break;
+                    case "VX22Wire":   
+                        intermediate = quantity.doubleValue()-23.75;
+                        calcQuantity = BigDecimal.valueOf(intermediate);
+                        break;
+                    case "VX34Wire":   
+                        intermediate = quantity.doubleValue()-35.75;
+                        calcQuantity = BigDecimal.valueOf(intermediate);
+                        break;
+                    case "VX46Wire":   
+                        intermediate = quantity.doubleValue()-47.75;
+                        calcQuantity = BigDecimal.valueOf(intermediate);
+                        break;
+                    case "VX58Wire":   
+                        intermediate = quantity.doubleValue()-59.75;
+                        calcQuantity = BigDecimal.valueOf(intermediate);
+                        break;
+                    default:
+                        resultContext = dispatcher.runSync(serviceName, inputContext);
+                        calcQuantity = (BigDecimal)resultContext.get("quantity");
+                }
                 if (calcQuantity != null) {
                     this.quantity = calcQuantity;
                 }

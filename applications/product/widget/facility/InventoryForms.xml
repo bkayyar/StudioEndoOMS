@@ -78,7 +78,7 @@ under the License.
                 </entity-options>
             </drop-down>
         </field>
-        <field name="expireDate" title="${uiLabelMap.ProductExpireDate}"/>
+        <field name="expireDate" title="${uiLabelMap.ProductExpireDate}"><hidden/></field>
         <field name="facilityId" required-field="true">
             <drop-down allow-empty="true">
                 <entity-options entity-name="Facility" key-field-name="facilityId" description="${facilityName}">
@@ -89,9 +89,9 @@ under the License.
             </sub-hyperlink>
             </drop-down>
         </field>
-        <field name="lotId" title="${uiLabelMap.ProductLotId}"/>
-        <field name="uomId" title="${uiLabelMap.ProductUomId}"/>
-        <field name="binNumber" title="${uiLabelMap.ProductBinNumber}"/>
+        <field name="lotId" title="${uiLabelMap.ProductLotId}"><hidden/></field>
+        <field name="uomId" title="${uiLabelMap.ProductUomId}"><hidden/></field>
+        <field name="binNumber" title="${uiLabelMap.ProductBinNumber}"><hidden/></field>
         <field name="locationSeqId" title="${uiLabelMap.ProductFacilityLocation}">
             <lookup target-form-name="LookupFacilityLocation">
                 <sub-hyperlink use-when="locationSeqId!=null" target="EditFacilityLocation">
@@ -101,18 +101,20 @@ under the License.
             </lookup>
         </field>
         <field name="partyId">
-            <lookup target-form-name="LookupPartyName"/>
+            <hidden/>
         </field>
         <field name="ownerPartyId">
-            <lookup target-form-name="LookupPartyName"/>
+            <hidden/>
         </field>
-        <field name="unitCost"><text/></field>
+        <field name="unitCost">
+            <hidden/>
+        </field>
 
         <field name="accountingQuantityTotal">
-            <display/>
+            <hidden/>
         </field>
         <field name="totals" use-when="inventoryItem!=null" title="${uiLabelMap.ProductAvailablePromiseQuantityHand}">
-            <display description="${inventoryItem.availableToPromiseTotal} / ${inventoryItem.quantityOnHandTotal}"/>
+            <hidden/>
         </field>
 
         <field use-when="inventoryItem!=null" name="submit" title="${uiLabelMap.CommonUpdate}">

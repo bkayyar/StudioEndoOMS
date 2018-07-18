@@ -24,6 +24,18 @@ under the License.
     <CustomMethod customMethodId="6000" customMethodTypeId="TASK_FORMULA" customMethodName="exampleTaskFormula" description="Example task formula (qty * estimatedMilliSeconds * 10)"/>
     <!-- Bom Formulae -->
 
+    <CustomMethod customMethodId="6001" customMethodTypeId="BOM_FORMULA" customMethodName="HX22Wire" description="HX22 Wire Length Formula"/>
+    <CustomMethod customMethodId="6002" customMethodTypeId="BOM_FORMULA" customMethodName="HX28Wire" description="HX28 Wire Length Formula"/>
+    <CustomMethod customMethodId="6003" customMethodTypeId="BOM_FORMULA" customMethodName="HX34Wire" description="HX34 Wire Length Formula"/>
+    <CustomMethod customMethodId="6004" customMethodTypeId="BOM_FORMULA" customMethodName="HX46Wire" description="HX46 Wire Length Formula"/>
+    <CustomMethod customMethodId="6005" customMethodTypeId="BOM_FORMULA" customMethodName="DX34Wire" description="DX34 Wire Length Formula"/>
+    <CustomMethod customMethodId="6006" customMethodTypeId="BOM_FORMULA" customMethodName="DX43Wire" description="DX43 Wire Length Formula"/>
+    <CustomMethod customMethodId="6007" customMethodTypeId="BOM_FORMULA" customMethodName="LX58Wire" description="LX58 Wire Length Formula"/>
+    <CustomMethod customMethodId="6008" customMethodTypeId="BOM_FORMULA" customMethodName="VX22Wire" description="VX22 Wire Length Formula"/>
+    <CustomMethod customMethodId="6009" customMethodTypeId="BOM_FORMULA" customMethodName="VX34Wire" description="VX34 Wire Length Formula"/>
+    <CustomMethod customMethodId="6010" customMethodTypeId="BOM_FORMULA" customMethodName="VX46Wire" description="VX46 Wire Length Formula"/>
+    <CustomMethod customMethodId="6011" customMethodTypeId="BOM_FORMULA" customMethodName="VX58Wire" description="VX58 Wire Length Formula"/>
+
     <TechDataCalendarWeek calendarWeekId="DEMO_WEEK" description="Demo calendar week of 8hours/days 5days/week starting at 8h30 from monday to friday" mondayStartTime="08:30:00" mondayCapacity="2.88E7" tuesdayStartTime="08:30:00" tuesdayCapacity="2.88E7" wednesdayStartTime="08:30:00" wednesdayCapacity="2.88E7" thursdayStartTime="08:30:00" thursdayCapacity="2.88E7" fridayStartTime="08:30:00" fridayCapacity="2.88E7"/>
     <TechDataCalendar calendarId="DEMO_CALENDAR" description="Demo Workcenter Calendar" calendarWeekId="DEMO_WEEK"/>
     <TechDataCalendarExcDay calendarId="DEMO_CALENDAR" exceptionDateStartTime="2004-12-24 00:01:00.0" exceptionCapacity="0" description="Christmas Day"/>

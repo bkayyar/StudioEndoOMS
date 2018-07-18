@@ -138,12 +138,12 @@ under the License.
         <field name="serialNumber"><display/></field>
         <field name="softIdentifier"><display/></field>-->
         <field name="quantityOnHandTotal"><display description="${availableToPromiseTotal} / ${quantityOnHandTotal}"/></field>
-        <!--<field name="transfer" title="${uiLabelMap.ProductTransfer}" entry-name="inventoryItemId" widget-style="buttontext">
-            <hyperlink description="${uiLabelMap.ProductTransfer}" target="TransferInventoryItem">
+        <field name="transfer" title="${uiLabelMap.ProductTransfer}" entry-name="inventoryItemId" widget-style="buttontext"><hidden/>
+            <!--<hyperlink description="${uiLabelMap.ProductTransfer}" target="TransferInventoryItem">
                 <parameter param-name="facilityId"/>
                 <parameter param-name="inventoryItemId"/>
-            </hyperlink>
-        </field>-->
+            </hyperlink>-->
+        </field>
     </form>
     <form name="ListFacilityInventoryItemsNoLocations" type="list"  target="" title="" list-name="inventoryItems"
          override-list-size="${inventoryItemsSize}" paginate-target="SearchInventoryItemsByLabels"

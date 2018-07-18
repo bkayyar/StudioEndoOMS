@@ -46,8 +46,6 @@ under the License.
     <!-- Formulae -->
     <CustomMethodType customMethodTypeId="TASK_FORMULA" description="Formula for calculating time estimates for tasks"/>
     <CustomMethodType customMethodTypeId="BOM_FORMULA" description="Formula for calculating material estimates for boms"/>
-    <CustomMethod customMethodId="6001" customMethodTypeId="BOM_FORMULA" customMethodName="VX22Wire" description="VX22 Wire Length Formula"/>
-    <CustomMethod customMethodId="6002" customMethodTypeId="BOM_FORMULA" customMethodName="VX34Wire" description="VX34 Wire Length Formula"/>
     
     <!-- ProductionRun sequence type -->
     <Enumeration description="Predecessor" enumCode="PREDECESSOR" enumId="WF_PREDECESSOR" enumTypeId="WORKFLOW" sequenceId="1"/>
