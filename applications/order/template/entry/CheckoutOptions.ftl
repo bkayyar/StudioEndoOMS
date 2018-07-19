@@ -99,6 +99,14 @@ function submitForm(form, mode, value) {
                           <option value="${cartParty}">${cartParty}</option>
                           </#list>
                       </select>
+                      ${uiLabelMap.ProductReserveInventoryFromFacility}:
+                      <select name="${shipGroupIndex?default("0")}_shipGroupFacilityId">
+                        <option value=""></option>
+                        <#list productStoreFacilities as productStoreFacility>
+                          <#assign facility = productStoreFacility.getRelatedOne("Facility", false)>
+                          <option value="${productStoreFacility.facilityId}"<#if facilityId??><#if productStoreFacility.facilityId == facilityId> selected="selected"</#if></#if>>${facility.facilityName!} </option>
+                        </#list>
+                      </select>
                     </td>
                   </tr>
                   <tr>

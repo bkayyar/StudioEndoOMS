@@ -133,7 +133,7 @@ function lookupBom() {
         <input type="hidden" name="productId" value="${productId!}"/>
         <input type="hidden" name="productIdTo" value="${productIdTo!}"/>
         <input type="hidden" name="productAssocTypeId" value="${productAssocTypeId!}"/>
-        <#--<input type="hidden" name="fromDate" value="${fromDate!}"/>-->
+        <input type="hidden" name="fromDate" value="${fromDate!}"/>
         <table class="basic-table" cellspacing="0">
           <tr>
             <td align="right">${uiLabelMap.ProductProductId}</td>
@@ -194,7 +194,7 @@ function lookupBom() {
         <td width="74%"><input type="text" name="scrapFactor" <#if useValues>value="${(productAssoc.scrapFactor)!}"<#else>value="${(request.getParameter("scrapFactor"))!}"</#if> size="10" maxlength="15"/></td>
     </tr>-->
     <tr>
-        <td width="26%" align="left">${uiLabelMap.ManufacturingFormula}</td>
+        <td width="26%" align="right">${uiLabelMap.ManufacturingFormula}</td>
         <td>&nbsp;</td>
         <td width="74%">
             <select name="estimateCalcMethod">
@@ -212,7 +212,7 @@ function lookupBom() {
         </td>
     </tr>
     <tr>
-        <td width="16%" align="left">${uiLabelMap.ManufacturingRoutingTask}</td>
+        <td width="16%" align="right">${uiLabelMap.ManufacturingRoutingTask}</td>
         <td>&nbsp;</td>
         <td width="74%">
           <#if useValues>

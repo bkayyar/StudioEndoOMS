@@ -2356,7 +2356,7 @@ public class ProductionRunServices {
         BigDecimal quantity = (BigDecimal)context.get("quantity");
         String orderId = (String)context.get("orderId");
         String orderItemSeqId = (String)context.get("orderItemSeqId");
-        GenericValue product = config.getProduct();
+        GenericValue product = config.product;
 
         if (config == null && configId == null) {
             return ServiceUtil.returnError(UtilProperties.getMessage(resource, "ManufacturingConfigurationNotAvailable", locale));
@@ -2413,9 +2413,9 @@ public class ProductionRunServices {
                         try {
                             bomList = EntityQuery.use(delegator).from("ProductAssoc")
                                                         .where("productIdTo", componentProductId,
-                                                        "productId", product.getString("productId"),
                                                         "productAssocTypeId", "MANUF_COMPONENT")
                                                         .queryList();
+                            componentQuantity = BigDecimal.valueOf(127.0);
                         } catch (GenericEntityException e) {
                             return ServiceUtil.returnError("LOL :)");
                         }
@@ -2424,7 +2424,9 @@ public class ProductionRunServices {
                             GenericValue genericService;
                             try {
                                 genericService = bomNode.getRelatedOne("CustomMethod", false);
+                                componentQuantity = BigDecimal.valueOf(128.0);
                             } catch (Exception exc) {
+                                componentQuantity = BigDecimal.valueOf(1281.0);
                                 return ServiceUtil.returnError("LOL2 :)");
                             }
                             if (genericService != null && genericService.getString("customMethodName") != null)

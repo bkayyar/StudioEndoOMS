@@ -48,6 +48,8 @@ context.userLogin = userLogin
 context.productStoreId = productStore.get("productStoreId")
 context.productStore = productStore
 shipToParty = from("Party").where("partyId", shoppingCart.getShipToCustomerPartyId()).cache(true).queryOne()
+productStoreFacilities = from("ProductStoreFacility").where("productStoreId", shoppingCart.getProductStoreId()).queryList()
+context.productStoreFacilities = productStoreFacilities
 context.shippingContactMechList = ContactHelper.getContactMech(shipToParty, "SHIPPING_LOCATION", "POSTAL_ADDRESS", false)
 context.emailList = ContactHelper.getContactMechByType(party, "EMAIL_ADDRESS", false)
 
